@@ -40,58 +40,58 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 px-4 md:px-8 bg-neo-yellow">
+    <section id="skills" className="pt-24 2xl:pt-32 pb-16 px-4 md:px-8 bg-neo-yellow">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col gap-4 mb-12 text-center">
+        <div className="flex flex-col gap-3 mb-10 text-center">
           <div className="flex justify-center">
             <div className="bg-white neo-brutalism-border px-4 py-2 shadow-neo-sm rounded-md inline-block">
               <span className="text-sm font-bold uppercase">My Arsenal</span>
             </div>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight">
             TECHNOLOGIES <span className="text-neo-blue">I&apos;VE USE</span>
           </h2>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-gray-800 max-w-2xl mx-auto">
             Tech stack dan tools yang saya gunakan untuk membangun aplikasi web dan mobile
           </p>
         </div>
 
         {/* Tech Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 md:gap-4">
           {technologies.map((tech, index) => (
             <div 
               key={index}
-              className="bg-white neo-brutalism-border shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-neo-hover transition-all rounded-lg p-6 flex flex-col items-center gap-3 group"
+              className="bg-white neo-brutalism-border shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-neo-hover transition-all rounded-lg p-2 md:p-4 flex flex-col items-center gap-1.5 md:gap-2 group"
             >
-              <div className="text-5xl transition-transform group-hover:scale-110">
+              <div className="text-2xl md:text-4xl transition-transform group-hover:scale-110">
                 <tech.icon style={{ color: tech.color }} />
               </div>
               <div className="text-center">
-                <h3 className="text-sm font-bold">{tech.name}</h3>
-                <span className="text-xs text-gray-600">{tech.category}</span>
+                <h3 className="text-[10px] md:text-sm font-bold leading-tight">{tech.name}</h3>
+                <span className="text-[8px] md:text-xs text-gray-600">{tech.category}</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Additional Skills */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-6">
-            <h3 className="text-xl font-black mb-3 text-neo-blue">Full-stack Development</h3>
-            <p className="text-gray-700">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-4 md:p-5">
+            <h3 className="text-lg md:text-xl font-black mb-2 text-neo-blue">Full-stack Development</h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
               Experienced in building complete web applications from frontend to backend using modern frameworks
             </p>
           </div>
-          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-6">
-            <h3 className="text-xl font-black mb-3 text-neo-blue">Mobile Development</h3>
-            <p className="text-gray-700">
+          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-4 md:p-5">
+            <h3 className="text-lg md:text-xl font-black mb-2 text-neo-blue">Mobile Development</h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
               Creating responsive and intuitive mobile applications with Flutter for cross-platform deployment
             </p>
           </div>
-          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-6">
-            <h3 className="text-xl font-black mb-3 text-neo-blue">Data Visualization</h3>
-            <p className="text-gray-700">
+          <div className="bg-white neo-brutalism-border shadow-neo rounded-lg p-4 md:p-5">
+            <h3 className="text-lg md:text-xl font-black mb-2 text-neo-blue">Data Visualization</h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
               Passionate about creating visual representations of data to optimize public information systems
             </p>
           </div>

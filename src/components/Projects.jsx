@@ -99,10 +99,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-4 md:px-8 bg-white">
+    <section id="projects" className="pt-24 2xl:pt-32 pb-16 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col gap-4 mb-12">
+        <div className="flex flex-col gap-4 mb-10">
           <div className="bg-neo-yellow neo-brutalism-border px-4 py-2 shadow-neo-sm rounded-md inline-block w-fit">
             <span className="text-sm font-bold uppercase">Creative Portfolio</span>
           </div>
@@ -115,50 +115,50 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project, index) => (
             <div 
               key={project.id}
               className="bg-neo-white neo-brutalism-border shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-neo-hover transition-all rounded-lg overflow-hidden group"
             >
               {/* Project Header */}
-              <div className="bg-neo-blue text-white p-6">
-                <div className="flex items-start justify-between gap-4">
+              <div className="bg-neo-blue text-white p-4">
+                <div className="flex items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-2xl font-black mb-2">{project.title}</h3>
-                    <p className="text-sm opacity-90">{project.subtitle}</p>
+                    <h3 className="text-lg font-black mb-1">{project.title}</h3>
+                    <p className="text-xs opacity-90">{project.subtitle}</p>
                   </div>
-                  <div className="bg-white text-neo-blue neo-brutalism-border px-3 py-1 text-sm font-bold rounded">
+                  <div className="bg-white text-neo-blue neo-brutalism-border px-2 py-1 text-xs font-bold rounded">
                     {String(index + 1).padStart(2, '0')}
                   </div>
                 </div>
               </div>
 
               {/* Project Content */}
-              <div className="p-6 flex flex-col gap-4">
-                <p className="text-gray-700 leading-relaxed">{project.description}</p>
+              <div className="p-4 flex flex-col gap-3">
+                <p className="text-sm text-gray-700 leading-relaxed">{project.description}</p>
                 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3 pt-2">
+                <div className="flex flex-wrap gap-2 pt-1">
                   {project.techStack.map((tech, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-white neo-brutalism-border px-3 py-1 shadow-neo-sm rounded">
-                      <tech.icon style={{ color: tech.color }} className="text-lg" />
+                    <div key={i} className="flex items-center gap-1.5 bg-white neo-brutalism-border px-2 py-1 shadow-neo-sm rounded">
+                      <tech.icon style={{ color: tech.color }} className="text-sm" />
                       <span className="text-xs font-bold">{tech.name}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Hashtag */}
-                <div className="pt-2">
-                  <span className="text-sm text-neo-blue font-bold">{project.hashtag}</span>
+                <div className="pt-1">
+                  <span className="text-xs text-neo-blue font-bold">{project.hashtag}</span>
                 </div>
 
                 {/* View Project Link */}
                 <a 
                   href={project.link}
-                  className="flex items-center gap-2 text-sm font-bold uppercase text-neo-blue hover:underline decoration-2 underline-offset-4 mt-2"
+                  className="flex items-center gap-1.5 text-xs font-bold uppercase text-neo-blue hover:underline decoration-2 underline-offset-4 mt-1"
                 >
-                  View Project <FaExternalLinkAlt className="text-xs" />
+                  View Project <FaExternalLinkAlt className="text-[10px]" />
                 </a>
               </div>
             </div>

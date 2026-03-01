@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Muhammad Yasir Arafat - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Theme Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "neo-yellow": "#FFD700",
+                        "neo-blue": "#0d59f2",
+                        "neo-black": "#0d121c",
+                        "neo-white": "#f8f9fc",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'neo': '4px 4px 0px 0px #0d121c',
+                        'neo-sm': '2px 2px 0px 0px #0d121c',
+                        'neo-lg': '8px 8px 0px 0px #0d121c',
+                        'neo-hover': '2px 2px 0px 0px #0d121c',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .neo-brutalism-border {
+            border: 3px solid #0d121c;
+        }
+    </style>
+</head>
+
+<body class="bg-neo-yellow font-display text-neo-black overflow-x-hidden min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <div class="fixed top-6 left-0 right-0 z-50 px-4 flex justify-center w-full">
+        <header
+            class="bg-neo-white neo-brutalism-border shadow-neo flex w-full max-w-[960px] items-center justify-between rounded-lg px-6 py-3">
+            <div class="flex items-center gap-2">
+                <div
+                    class="bg-neo-blue text-white w-8 h-8 flex items-center justify-center neo-brutalism-border shadow-neo-sm rounded-sm">
+                    <span class="material-symbols-outlined text-sm font-bold">code</span>
+                </div>
+                <h2 class="text-xl font-black uppercase tracking-tight">MYA</h2>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex gap-6">
+                    <a class="text-sm font-bold uppercase hover:underline decoration-2 underline-offset-4"
+                        href="#">Work</a>
+                    <a class="text-sm font-bold uppercase hover:underline decoration-2 underline-offset-4"
+                        href="#">About</a>
+                    <a class="text-sm font-bold uppercase hover:underline decoration-2 underline-offset-4"
+                        href="#">Services</a>
+                    <a class="text-sm font-bold uppercase hover:underline decoration-2 underline-offset-4"
+                        href="#">Contact</a>
+                </nav>
+                <button
+                    class="bg-neo-blue text-white text-sm font-bold uppercase px-6 py-2 neo-brutalism-border shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-hover transition-all rounded-md">
+                    Let's Talk
+                </button>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <button
+                class="md:hidden p-1 neo-brutalism-border bg-white shadow-neo-sm rounded active:translate-y-1 active:shadow-none">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+    </div>
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto flex flex-col gap-12">
+            <!-- Hero Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 flex flex-col gap-6 z-10 relative">
+                    <!-- Decorative Sticker -->
+                    <div
+                        class="absolute -top-12 -left-4 md:-left-12 rotate-[-6deg] bg-white neo-brutalism-border px-4 py-1 shadow-neo-sm rounded-full hidden sm:block">
+                        <span class="text-xs font-bold uppercase tracking-wider">Available for hire!</span>
+                    </div>
+                    <h1
+                        class="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter uppercase drop-shadow-sm">
+                        Hi! I'm <br />
+                        <span class="text-white text-stroke-3"
+                            style="-webkit-text-stroke: 2px #0d121c; text-stroke: 2px #0d121c;">Muhammad</span><br />
+                        Yasir Arafat
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl font-medium bg-white neo-brutalism-border p-4 shadow-neo max-w-xl rounded-lg rotate-1">
+                        🚀 Vibe Coding Enthusiast &amp; Full-Stack Developer turning caffeine into clean code and
+                        pixel-perfect chaos.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-neo-blue text-white text-lg font-black uppercase px-8 py-4 neo-brutalism-border shadow-neo-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-neo-hover transition-all rounded-lg flex items-center gap-2 group">
+                            Let's Build!
+                            <span
+                                class="material-symbols-outlined group-hover:rotate-45 transition-transform">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-white text-neo-black text-lg font-bold uppercase px-8 py-4 neo-brutalism-border shadow-neo-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-neo-hover transition-all rounded-lg">
+                            View Work
+                        </button>
+                    </div>
+                </div>
+                <!-- Image / Avatar Area -->
+                <div class="lg:col-span-5 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+                    <div class="relative w-full max-w-[450px] aspect-square">
+                        <!-- Abstract Background Shapes -->
+                        <div
+                            class="absolute inset-0 bg-white neo-brutalism-border shadow-neo-lg rounded-full overflow-hidden">
+                            <div
+                                class="w-full h-full bg-[radial-gradient(circle_at_50%_120%,#0d59f2_20%,transparent_60%)] opacity-20">
+                            </div>
+                            <!-- Grid Pattern -->
+                            <div class="absolute inset-0 opacity-10"
+                                style="background-image: radial-gradient(#0d121c 2px, transparent 2px); background-size: 20px 20px;">
+                            </div>
+                        </div>
+                        <!-- Main Avatar Image -->
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[90%] bg-center bg-cover bg-no-repeat z-10"
+                            data-alt="Portrait of Muhammad Yasir Arafat smiling professionally"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdd3YUrP1Jh-WCHr0QtKdGPdSXhyUhh12CUkp2-cR2-jvq13ty4uQEIKjdkpMmfyN3N9C4gwCWmrlt9wzJXB7xiXgfeHgFmL0u1rIjjGDK8THoowUdKT1mUgSgt8_MNFKn8qtfSlZSp5RVji27gDR4E0SUc6LTFA1UGTlc5G9b_CFU-WIaUbnzHFzx6b6T8wj5Lr02a2vusr-GVMhQ-S29xbw6q7TBzeQY46Y-iMj5eUE1rcnV00ca30U88Bgk2hbxQZwK1gbQwRQ'); clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);">
+                        </div>
+                        <!-- Floating Tech Stickers -->
+                        <div
+                            class="absolute -right-4 top-10 bg-[#FF6B6B] neo-brutalism-border p-3 shadow-neo rotate-12 rounded-lg z-20 animate-pulse">
+                            <span class="material-symbols-outlined text-white text-3xl">flutter_dash</span>
+                        </div>
+                        <div
+                            class="absolute -left-6 bottom-20 bg-[#4ECDC4] neo-brutalism-border p-3 shadow-neo -rotate-6 rounded-lg z-20">
+                            <span class="material-symbols-outlined text-white text-3xl">php</span>
+                        </div>
+                        <div
+                            class="absolute right-8 bottom-4 bg-[#FFE66D] neo-brutalism-border px-3 py-1 shadow-neo rotate-[-3deg] rounded-md z-20">
+                            <span class="text-xs font-bold">REACT.JS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Tech Stack Marquee / Stickers -->
+            <section class="py-12">
+                <div class="bg-white neo-brutalism-border shadow-neo-lg rounded-xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-neo-black"></div>
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Tech Stack Stickers
+                            </h2>
+                            <p class="font-medium mt-2">Tools I use to break things and fix them again.</p>
+                        </div>
+                        <button
+                            class="bg-neo-black text-white px-4 py-2 text-sm font-bold uppercase rounded neo-brutalism-border hover:bg-white hover:text-black transition-colors">
+                            View All Skills
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Flutter Card -->
+                        <div
+                            class="group bg-[#f0f4ff] neo-brutalism-border p-4 rounded-lg shadow-neo-sm hover:shadow-neo hover:-translate-y-1 transition-all cursor-crosshair">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="material-symbols-outlined text-4xl text-blue-500">flutter_dash</span>
+                                <span
+                                    class="material-symbols-outlined text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Flutter</h3>
+                            <p class="text-sm font-medium opacity-70">Cross-platform magic</p>
+                        </div>
+                        <!-- Laravel Card -->
+                        <div
+                            class="group bg-[#fff0f0] neo-brutalism-border p-4 rounded-lg shadow-neo-sm hover:shadow-neo hover:-translate-y-1 transition-all cursor-crosshair">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="material-symbols-outlined text-4xl text-red-500">php</span>
+                                <span
+                                    class="material-symbols-outlined text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Laravel</h3>
+                            <p class="text-sm font-medium opacity-70">PHP Powerhouse</p>
+                        </div>
+                        <!-- React Card -->
+                        <div
+                            class="group bg-[#f0ffff] neo-brutalism-border p-4 rounded-lg shadow-neo-sm hover:shadow-neo hover:-translate-y-1 transition-all cursor-crosshair">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="material-symbols-outlined text-4xl text-cyan-500">code_blocks</span>
+                                <span
+                                    class="material-symbols-outlined text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                            <h3 class="font-bold text-lg">React</h3>
+                            <p class="text-sm font-medium opacity-70">UI Interactivity</p>
+                        </div>
+                        <!-- Node Card -->
+                        <div
+                            class="group bg-[#f0fff4] neo-brutalism-border p-4 rounded-lg shadow-neo-sm hover:shadow-neo hover:-translate-y-1 transition-all cursor-crosshair">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="material-symbols-outlined text-4xl text-green-600">dns</span>
+                                <span
+                                    class="material-symbols-outlined text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Node.js</h3>
+                            <p class="text-sm font-medium opacity-70">Backend Logic</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Stats Section -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-[#FFE66D] neo-brutalism-border p-6 shadow-neo rounded-lg flex flex-col justify-between h-40 transform hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start">
+                        <p class="font-bold text-lg uppercase">Projects Shipped</p>
+                        <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black">50+</p>
+                        <p class="text-sm font-bold mt-1 text-green-800 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">trending_up</span> +12% this year
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#FF6B6B] neo-brutalism-border p-6 shadow-neo rounded-lg flex flex-col justify-between h-40 transform hover:scale-[1.02] transition-transform text-white">
+                    <div class="flex justify-between items-start">
+                        <p class="font-bold text-lg uppercase text-white">Happy Clients</p>
+                        <span class="material-symbols-outlined text-3xl text-white">sentiment_very_satisfied</span>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black text-white">30+</p>
+                        <p class="text-sm font-bold mt-1 text-white flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">favorite</span> 5 star avg
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#4ECDC4] neo-brutalism-border p-6 shadow-neo rounded-lg flex flex-col justify-between h-40 transform hover:scale-[1.02] transition-transform">
+                    <div class="flex justify-between items-start">
+                        <p class="font-bold text-lg uppercase">Cups of Coffee</p>
+                        <span class="material-symbols-outlined text-3xl">local_cafe</span>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-black">1000+</p>
+                        <p class="text-sm font-bold mt-1 text-teal-900 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">all_inclusive</span> Infinite fuel
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-neo-black text-white py-12 px-4 mt-12 border-t-4 border-black">
+        <div class="max-w-6xl mx-auto flex flex-col gap-8 text-center">
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="w-12 h-12 bg-white text-black neo-brutalism-border shadow-[4px_4px_0_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] rounded-full flex items-center justify-center transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">alternate_email</span>
+                </a>
+                <a class="w-12 h-12 bg-white text-black neo-brutalism-border shadow-[4px_4px_0_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] rounded-full flex items-center justify-center transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">code</span>
+                </a>
+                <a class="w-12 h-12 bg-white text-black neo-brutalism-border shadow-[4px_4px_0_white] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] rounded-full flex items-center justify-center transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                </a>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm font-bold uppercase tracking-wider">
+                <a class="hover:text-neo-yellow hover:underline decoration-2 underline-offset-4" href="#">Privacy
+                    Policy</a>
+                <span class="hidden md:inline text-gray-600">|</span>
+                <a class="hover:text-neo-yellow hover:underline decoration-2 underline-offset-4" href="#">Terms of
+                    Service</a>
+            </div>
+            <p class="text-gray-400 text-sm mt-4 font-mono">© 2023 Muhammad Yasir Arafat. All vibes reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

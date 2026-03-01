@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Vibe Coder - Comic Portfolio</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f42525", // Bright Red
+                        "comic-yellow": "#ffe600", // Classic Comic Yellow
+                        "comic-blue": "#0a56f1", // Electric Blue
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a1a1a",
+                        "ink-black": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "comic": ["Bangers", "cursive"], // Adding a comic font if available, fallback to display
+                    },
+                    backgroundImage: {
+                        'halftone': "radial-gradient(#e5e5e5 20%, transparent 20%)",
+                        'halftone-dark': "radial-gradient(#333 20%, transparent 20%)",
+                    },
+                    boxShadow: {
+                        'comic': '4px 4px 0px 0px #000000',
+                        'comic-hover': '2px 2px 0px 0px #000000',
+                        'comic-lg': '8px 8px 0px 0px #000000',
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- Google Fonts for Comic Style -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Bangers&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        /* Custom Comic Styles */
+        .text-stroke-sm {
+            -webkit-text-stroke: 1px black;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 2px black;
+        }
+
+        .text-stroke-white {
+            -webkit-text-stroke: 4px white;
+            paint-order: stroke fill;
+        }
+
+        .bg-halftone {
+            background-image: radial-gradient(#d1d5db 2px, transparent 2px);
+            background-size: 20px 20px;
+        }
+
+        .dark .bg-halftone {
+            background-image: radial-gradient(#374151 2px, transparent 2px);
+            background-size: 20px 20px;
+        }
+
+        /* Jagged Speech Bubble */
+        .clip-explosion {
+            clip-path: polygon(20% 0%, 30% 10%, 45% 0%, 50% 15%, 65% 5%, 75% 20%, 90% 10%, 85% 30%, 100% 40%, 85% 50%, 100% 65%, 85% 75%, 95% 90%, 75% 85%, 60% 100%, 50% 85%, 35% 100%, 25% 85%, 10% 95%, 15% 75%, 0% 65%, 15% 50%, 0% 35%, 15% 25%);
+        }
+
+        .clip-panel {
+            clip-path: polygon(0 0, 100% 2%, 98% 98%, 2% 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-x-hidden transition-colors duration-300">
+    <div class="min-h-screen flex flex-col relative group/design-root">
+        <!-- Comic Strip Header -->
+        <header class="sticky top-0 z-50 w-full border-b-4 border-ink-black bg-comic-yellow px-4 py-3 shadow-comic">
+            <div class="mx-auto max-w-7xl flex items-center justify-between">
+                <!-- Logo Area -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex items-center justify-center bg-primary text-white border-2 border-ink-black size-10 shadow-[2px_2px_0px_0px_#000]">
+                        <span class="material-symbols-outlined font-bold">bolt</span>
+                    </div>
+                    <div class="bg-white border-2 border-ink-black px-3 py-1 -skew-x-6 shadow-[2px_2px_0px_0px_#000]">
+                        <h2 class="text-ink-black text-xl font-['Bangers'] tracking-wide leading-none skew-x-6">THE VIBE
+                            CODER</h2>
+                    </div>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-6">
+                    <nav
+                        class="flex items-center gap-6 bg-white border-2 border-ink-black px-6 py-2 rounded-full shadow-[3px_3px_0px_0px_#000]">
+                        <a class="text-ink-black font-bold uppercase hover:text-primary transition-colors text-sm"
+                            href="#">Projects</a>
+                        <span class="w-1.5 h-1.5 rounded-full bg-ink-black"></span>
+                        <a class="text-ink-black font-bold uppercase hover:text-primary transition-colors text-sm"
+                            href="#">About</a>
+                        <span class="w-1.5 h-1.5 rounded-full bg-ink-black"></span>
+                        <a class="text-ink-black font-bold uppercase hover:text-primary transition-colors text-sm"
+                            href="#">Skills</a>
+                    </nav>
+                    <a class="hidden lg:flex items-center justify-center bg-comic-blue text-white border-2 border-ink-black px-5 py-2 font-bold uppercase shadow-comic hover:shadow-comic-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                        href="#contact">
+                        <span>Issue #1: Contact</span>
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button
+                    class="md:hidden flex items-center justify-center size-10 bg-white border-2 border-ink-black shadow-comic">
+                    <span class="material-symbols-outlined text-ink-black">menu</span>
+                </button>
+            </div>
+        </header>
+        <!-- Main Content Area: Comic Cover Layout -->
+        <main class="flex-grow flex items-center justify-center relative py-12 px-4 md:px-8 bg-halftone">
+            <!-- Diagonal Background Slice for dynamism -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <div
+                    class="absolute -top-[20%] -right-[10%] w-[70%] h-[150%] bg-comic-blue/10 -skew-x-12 border-l-4 border-ink-black">
+                </div>
+            </div>
+            <!-- Content Container -->
+            <div
+                class="relative z-10 w-full max-w-[1200px] bg-white border-4 border-ink-black p-2 shadow-comic-lg md:p-4 rotate-1">
+                <!-- Inner Border Frame -->
+                <div
+                    class="border-2 border-ink-black h-full w-full p-6 md:p-12 relative overflow-hidden bg-background-light dark:bg-background-dark">
+                    <!-- Top Bar details (Date, Price, Code) -->
+                    <div
+                        class="absolute top-0 left-0 w-full flex justify-between px-4 py-2 border-b-2 border-ink-black bg-gray-100 z-20">
+                        <div class="flex gap-4 font-mono text-xs md:text-sm font-bold text-ink-black">
+                            <span>VOL. 1</span>
+                            <span>NO. 1</span>
+                        </div>
+                        <div class="font-mono text-xs md:text-sm font-bold text-ink-black">
+                            FULL STACK APPROVED AUTHORITY
+                        </div>
+                        <div class="font-mono text-xs md:text-sm font-bold text-ink-black">
+                            $priceless
+                        </div>
+                    </div>
+                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full">
+                        <!-- Left Column: Text & CTA -->
+                        <div class="lg:col-span-7 flex flex-col gap-6 relative z-30">
+                            <!-- Super Title Badge -->
+                            <div class="inline-flex self-start -rotate-2">
+                                <span
+                                    class="bg-comic-yellow border-2 border-ink-black px-3 py-1 text-xs font-black tracking-widest uppercase shadow-[2px_2px_0px_0px_#000]">
+                                    World Premiere!
+                                </span>
+                            </div>
+                            <!-- Main Headline -->
+                            <div class="relative">
+                                <h1
+                                    class="font-['Bangers'] text-6xl md:text-8xl lg:text-9xl leading-[0.85] text-primary tracking-wide drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] text-stroke-white">
+                                    <span class="block text-ink-black relative z-10">HI! I'M</span>
+                                    <span class="block relative z-10 text-primary">MUHAMMAD</span>
+                                    <span class="block relative z-10 text-primary">YASIR</span>
+                                    <span class="block text-comic-blue relative z-10">ARAFAT</span>
+                                </h1>
+                                <!-- Decorative Action Lines behind text -->
+                                <div
+                                    class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-20">
+                                    <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M42.7,-62.9C50.9,-52.8,49.3,-34.4,52.3,-19.1C55.4,-3.8,63.1,8.4,60.8,19.3C58.5,30.2,46.1,39.9,34.1,48.5C22.1,57.1,10.5,64.7,-2.4,68C-15.3,71.3,-31.1,70.4,-41.8,61.2C-52.5,52,-58.1,34.6,-61.7,17.4C-65.3,0.2,-66.9,-16.8,-59.4,-29.4C-51.9,-42,-35.3,-50.2,-21.1,-56.3C-6.9,-62.4,4.9,-66.4,18.4,-67.2C31.9,-68,47.1,-65.6,42.7,-62.9Z"
+                                            fill="#f42525" transform="translate(100 100)"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Subtext Box -->
+                            <div
+                                class="bg-white border-2 border-ink-black p-4 shadow-[4px_4px_0px_0px_#000] max-w-lg transform -rotate-1">
+                                <p class="font-bold text-lg leading-tight text-ink-black">
+                                    <span class="text-primary">Vibe Coding Enthusiast</span> &amp; Full-Stack Developer
+                                    ready to save the world, one line of code at a time.
+                                </p>
+                            </div>
+                            <!-- Explosion CTA Button -->
+                            <div class="relative mt-4 group cursor-pointer inline-block w-fit">
+                                <div
+                                    class="absolute inset-0 bg-ink-black clip-explosion scale-110 group-hover:scale-125 transition-transform duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-gradient-to-br from-yellow-300 to-comic-yellow border-2 border-transparent clip-explosion px-10 py-8 flex items-center justify-center text-center transform group-hover:scale-110 transition-transform duration-200">
+                                    <span
+                                        class="font-['Bangers'] text-2xl md:text-3xl text-primary tracking-wider leading-none drop-shadow-sm -rotate-3 block">
+                                        KABOOM!<br /><span class="text-ink-black text-xl">HIRE ME</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Avatar/Hero Image -->
+                        <div
+                            class="lg:col-span-5 relative h-full min-h-[400px] flex items-end justify-center lg:justify-end">
+                            <!-- Panel Background for Hero -->
+                            <div
+                                class="absolute inset-0 bg-comic-blue border-4 border-ink-black transform rotate-2 clip-panel z-10 opacity-20">
+                            </div>
+                            <!-- Hero Image -->
+                            <div
+                                class="relative z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500 hover:scale-105 origin-bottom">
+                                <!-- Speed lines effect -->
+                                <div class="absolute -top-10 -right-10 w-24 h-24 text-comic-yellow animate-pulse">
+                                    <svg fill="currentColor" viewbox="0 0 100 100">
+                                        <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="w-full max-w-md aspect-[3/4] overflow-hidden border-4 border-ink-black bg-white shadow-comic-lg"
+                                    style="clip-path: polygon(5% 0, 100% 0, 100% 90%, 95% 100%, 0 100%, 0 10%);">
+                                    <div class="w-full h-full relative group">
+                                        <!-- Main Character Image -->
+                                        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale group-hover:grayscale-0 transition-all duration-300"
+                                            data-alt="A heroic portrait of a developer looking upwards with determination, stylized with high contrast"
+                                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYvbXAyi5XuaXWv8xAH7gMxNPpmThzTsJ0Aif-z9Z_qrtxBRI1mqTUua9E0QyJkgSftESCepKUjSU5-vnogSB1MMRyHd_6zra9cfvmsx_UiYpTHSPua-72-hWHkOTYHVW718UtkhuH33T7kWH2qYsV6cvHsVWzY4jUMlRq9OSsslFmaxIKFvHliD5j5wyaOe8cVTbFNGmdmsTtSB5DDCBx2JejcKhFHvRgMRtNo5f4x1LEIz1Ufx1f6MhBmAgST6bEyzG4dzYVUcM');">
+                                        </div>
+                                        <!-- Halftone overlay on image -->
+                                        <div
+                                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMikiLz48L3N2Zz4=')] opacity-30 pointer-events-none">
+                                        </div>
+                                        <!-- Gradient Overlay -->
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent mix-blend-multiply">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Floating Badge on Image -->
+                                <div
+                                    class="absolute -bottom-6 -left-6 bg-white border-4 border-ink-black rounded-full p-4 w-24 h-24 flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_#000]">
+                                    <div class="text-center font-['Bangers'] leading-none">
+                                        <span class="block text-xs">Rated</span>
+                                        <span class="block text-3xl text-primary">A+</span>
+                                        <span class="block text-xs">Code</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bottom Bar Code decoration -->
+                    <div class="absolute bottom-2 right-4 flex gap-2">
+                        <div class="h-8 w-2 bg-ink-black"></div>
+                        <div class="h-8 w-1 bg-ink-black"></div>
+                        <div class="h-8 w-4 bg-ink-black"></div>
+                        <div class="h-8 w-1 bg-ink-black"></div>
+                        <div class="h-8 w-3 bg-ink-black"></div>
+                        <div class="h-8 w-2 bg-ink-black"></div>
+                        <div class="font-mono text-xs self-end mb-[-2px]">12345-VIBE-CODE</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating comic elements around -->
+            <div class="hidden lg:block absolute top-1/4 left-10 animate-bounce delay-700">
+                <div class="bg-white border-2 border-ink-black px-4 py-2 rounded-full shadow-comic text-xs font-bold">
+                    <span class="text-primary font-['Bangers'] text-lg">POW!</span> React Expert
+                </div>
+            </div>
+            <div class="hidden lg:block absolute bottom-1/4 right-10 animate-bounce delay-100">
+                <div class="bg-white border-2 border-ink-black px-4 py-2 rounded-full shadow-comic text-xs font-bold">
+                    <span class="text-comic-blue font-['Bangers'] text-lg">ZAP!</span> Backend Wizard
+                </div>
+            </div>
+        </main>
+        <!-- Comic Footer -->
+        <footer class="bg-ink-black text-white py-6 border-t-4 border-primary">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-comic-yellow">copyright</span>
+                    <span class="font-['Bangers'] tracking-wide">2023 THE VIBE CODER INDUSTRIES</span>
+                </div>
+                <div class="flex gap-4">
+                    <a class="hover:text-comic-yellow transition-colors" href="#"><span
+                            class="material-symbols-outlined">code</span></a>
+                    <a class="hover:text-comic-yellow transition-colors" href="#"><span
+                            class="material-symbols-outlined">terminal</span></a>
+                    <a class="hover:text-comic-yellow transition-colors" href="#"><span
+                            class="material-symbols-outlined">alternate_email</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

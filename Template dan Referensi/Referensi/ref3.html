@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Muhammad Yasir Arafat - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df280",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#102219",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    boxShadow: {
+                        'neo': '5px 5px 0px 0px rgba(0,0,0,1)',
+                        'neo-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
+                        'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar to match the theme */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f8f7;
+            border-left: 2px solid black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0df280;
+            border: 2px solid black;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0bc468;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Navbar -->
+        <header class="sticky top-0 z-50 w-full border-b-4 border-black bg-white/90 backdrop-blur-sm px-6 py-4">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex h-10 w-10 items-center justify-center border-2 border-black bg-primary shadow-neo-sm">
+                        <span class="material-symbols-outlined text-black font-bold">code</span>
+                    </div>
+                    <h1 class="text-xl font-bold uppercase tracking-tight text-black">M. Yasir Arafat</h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-bold uppercase hover:underline decoration-4 decoration-primary underline-offset-4 text-black"
+                        href="#">Work</a>
+                    <a class="text-sm font-bold uppercase hover:underline decoration-4 decoration-primary underline-offset-4 text-black"
+                        href="#">About</a>
+                    <a class="text-sm font-bold uppercase hover:underline decoration-4 decoration-primary underline-offset-4 text-black"
+                        href="#">Contact</a>
+                </nav>
+                <button
+                    class="hidden md:flex items-center gap-2 border-2 border-black bg-white px-4 py-2 text-sm font-bold uppercase text-black shadow-neo-sm transition-transform active:translate-x-[2px] active:translate-y-[2px] active:shadow-none hover:bg-slate-100">
+                    <span>Resume</span>
+                    <span class="material-symbols-outlined text-sm">download</span>
+                </button>
+                <button
+                    class="md:hidden flex items-center justify-center p-2 border-2 border-black bg-white shadow-neo-sm">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-grow flex flex-col items-center w-full">
+            <!-- Hero / Intro Context (Brief) -->
+            <section class="w-full max-w-7xl px-6 py-16 md:py-24">
+                <div class="border-l-4 border-black pl-6 md:pl-10">
+                    <h2 class="text-5xl md:text-7xl font-bold text-black mb-6 leading-[0.9]">
+                        VIBE CODING <br />
+                        <span class="bg-primary px-2">ENTHUSIAST</span>
+                    </h2>
+                    <p
+                        class="max-w-2xl text-lg md:text-xl font-medium text-slate-800 border-2 border-black p-6 bg-white shadow-neo bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]">
+                        Full-Stack Developer crafting digital experiences with raw energy and precise logic. Based in
+                        the cloud, grounded in code.
+                    </p>
+                </div>
+            </section>
+            <!-- Projects Section -->
+            <section class="w-full bg-[#e0e7ff] border-y-4 border-black py-20 px-6 relative overflow-hidden">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none"
+                    style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 30px 30px;">
+                </div>
+                <div class="mx-auto max-w-7xl relative z-10">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                        <div>
+                            <div
+                                class="inline-block bg-black text-white px-3 py-1 text-sm font-bold uppercase mb-2 transform -rotate-2">
+                                Portfolio</div>
+                            <h2 class="text-4xl md:text-6xl font-bold text-black uppercase tracking-tighter">Featured
+                                <br />Projects</h2>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="h-4 w-4 rounded-full bg-primary border-2 border-black"></div>
+                            <div class="h-4 w-4 rounded-full bg-white border-2 border-black"></div>
+                            <div class="h-4 w-4 rounded-full bg-black"></div>
+                        </div>
+                    </div>
+                    <!-- Masonry Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                        <!-- Project 1: Hotelin -->
+                        <article class="group relative flex flex-col h-full">
+                            <div
+                                class="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl">
+                            </div>
+                            <div
+                                class="relative flex flex-col h-full border-4 border-black bg-white rounded-xl overflow-hidden transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1">
+                                <!-- Card Header -->
+                                <div
+                                    class="bg-primary border-b-4 border-black px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-2">
+                                        <div class="w-3 h-3 rounded-full border-2 border-black bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full border-2 border-black bg-yellow-400"></div>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-widest">Flutter</span>
+                                </div>
+                                <!-- Image Area -->
+                                <div
+                                    class="relative aspect-[4/3] bg-slate-100 border-b-4 border-black overflow-hidden group">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Modern hotel lobby interior luxury design"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1Sv98DVnwrH78t_3_FgHR4rMZFcZlCkXDUkRCasXygwpxPayyyZlWKFxu25YWJB26M4t-sRr_qck-cCj3cJkbzfyDsWkH0qbbarSupLKsioESDqtiILxLKE-ByxHcRjsyigwVSzTGH4jABaRlFmLSslZjUu-8oaFmw5S6zd2nM0AYr7bQCQgXyZEKQ3KVONyl5tP4P-5MZYUbYNYkNv5u-XITisXLkoyRpx_SJQDlVrfsfn5prOXcX3MJ3YvAZqthSWQo5dvJMWg')">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 backdrop-blur-sm">
+                                        <button
+                                            class="bg-white text-black font-bold py-2 px-6 border-2 border-black shadow-neo-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                                            View Case
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-3xl font-bold mb-2 uppercase">Hotelin</h3>
+                                    <p class="text-slate-600 font-medium mb-6 flex-grow border-l-4 border-primary pl-3">
+                                        Hotel booking platform with real-time availability and payment gateway
+                                        integration.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-auto">
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">Flutter</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Project 2: Tabunganku (Offset Layout) -->
+                        <article class="group relative flex flex-col h-full md:mt-16">
+                            <div
+                                class="absolute inset-0 bg-primary translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl">
+                            </div>
+                            <div
+                                class="relative flex flex-col h-full border-4 border-black bg-white rounded-xl overflow-hidden transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1">
+                                <!-- Card Header -->
+                                <div
+                                    class="bg-black text-white border-b-4 border-black px-4 py-2 flex justify-between items-center">
+                                    <span class="text-xs font-bold uppercase tracking-widest">React Native</span>
+                                    <div class="flex gap-2">
+                                        <span class="material-symbols-outlined text-sm">savings</span>
+                                    </div>
+                                </div>
+                                <!-- Image Area -->
+                                <div class="relative aspect-[4/3] bg-slate-100 border-b-4 border-black overflow-hidden">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Spread of banknotes and coins for finance"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuJ_tRe2A-K8UN0cEHdiBnwib3EzHMKqgOpNiVyzEJLo8Pq31DammkuT09j1_9U21aOIaQiqhyuZ-pm-e95zvZh-K2UETeWBzVty8XT9ZqT93ng3EcbZGiimlKzWErGPosh73ijNPPIZdWOeuOZWoNHdgwoP4kSE6NsAQyX12XXdY_RefRGSJVE0ThDdNW3OMpm6er9eFVLfPNIjqxPDAJ5vib1J1nFQCaaTuD7DNrrcAhON5V62R3LJ-ixpvu8S1vYuzu9xeNAlI')">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 bg-primary px-3 py-1 border-2 border-black text-xs font-bold shadow-neo-sm transform rotate-3">
+                                        BEST SELLER
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-3xl font-bold mb-2 uppercase">Tabunganku</h3>
+                                    <p class="text-slate-600 font-medium mb-6 flex-grow border-l-4 border-black pl-3">
+                                        Personal finance tracker helping users visualize savings goals with interactive
+                                        charts.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-auto">
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">React
+                                            Native</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">Redux</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Project 3: J-KOS TRADE -->
+                        <article class="group relative flex flex-col h-full lg:mt-8">
+                            <div
+                                class="absolute inset-0 bg-slate-800 translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl">
+                            </div>
+                            <div
+                                class="relative flex flex-col h-full border-4 border-black bg-white rounded-xl overflow-hidden transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1">
+                                <!-- Card Header -->
+                                <div
+                                    class="bg-yellow-300 border-b-4 border-black px-4 py-2 flex justify-between items-center">
+                                    <div class="flex gap-1">
+                                        <div class="w-2 h-2 bg-black"></div>
+                                        <div class="w-2 h-2 bg-black"></div>
+                                        <div class="w-2 h-2 bg-black"></div>
+                                    </div>
+                                    <span class="text-xs font-bold uppercase tracking-widest">MERN Stack</span>
+                                </div>
+                                <!-- Image Area -->
+                                <div class="relative aspect-[4/3] bg-slate-100 border-b-4 border-black overflow-hidden">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Laptop displaying stock market trading graphs"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIie0Jv5xPRR7zgw_Tgzs0E28QNX-x3yt48VlKa3GYU0KM8WXt9xL9ZRRPUvN65WBzYIbqT98cunkK0_OJHg8DDdt9xhdWs9zril3l4_JrWp1GwvKCYnvfFmcBgltLtTjCEg9QmHILNRI5f_OTakRTXJ7FB6YQk9S4CAgyv0CLe7MHL1Ce25CuTHHCTNhMfkVf-wAgR87NWZKBh2gk1e9yG9bUQb-yaD0OABXs1Y8p1MR-f2Z91xYTqfrU3jP_qWetskuBaBdfmZk')">
+                                    </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-3xl font-bold mb-2 uppercase">J-KOS TRADE</h3>
+                                    <p
+                                        class="text-slate-600 font-medium mb-6 flex-grow border-l-4 border-yellow-400 pl-3">
+                                        Comprehensive e-commerce trading site with real-time stock updates and secure
+                                        user auth.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mt-auto">
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">MongoDB</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">Express</span>
+                                        <span
+                                            class="px-2 py-1 bg-slate-200 border-2 border-black text-xs font-bold uppercase">React</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="mt-16 flex justify-center">
+                        <a class="inline-flex items-center gap-2 border-4 border-black bg-white px-8 py-4 text-lg font-bold uppercase shadow-neo hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
+                            href="#">
+                            See All Projects
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full bg-primary border-t-4 border-black">
+            <div class="mx-auto max-w-7xl px-6 py-16 md:py-24">
+                <div class="flex flex-col md:flex-row gap-12 justify-between items-start">
+                    <!-- Left: Main CTA -->
+                    <div class="max-w-2xl">
+                        <h2
+                            class="text-6xl md:text-8xl lg:text-9xl font-black text-black leading-[0.85] tracking-tighter mb-8 drop-shadow-[4px_4px_0_rgba(255,255,255,1)]">
+                            LET'S <br />CONNECT!
+                        </h2>
+                        <p class="text-xl md:text-2xl font-bold text-black border-l-4 border-black pl-4 mb-8 max-w-lg">
+                            Have a wild idea or a strict deadline? I'm ready for both. Let's build something loud.
+                        </p>
+                        <a class="inline-block bg-black text-white text-xl md:text-2xl font-bold px-8 py-4 border-2 border-white shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all mb-12"
+                            href="mailto:hello@yasirarafat.com">
+                            hello@yasirarafat.com
+                        </a>
+                    </div>
+                    <!-- Right: Links & Quirky Bits -->
+                    <div class="flex flex-col gap-6 w-full md:w-auto">
+                        <!-- Social Block -->
+                        <div
+                            class="bg-white border-4 border-black p-6 shadow-neo transform rotate-2 md:rotate-3 hover:rotate-0 transition-transform duration-300 w-full md:min-w-[300px]">
+                            <h3 class="text-2xl font-bold uppercase border-b-4 border-black pb-2 mb-4">Socials</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="flex items-center justify-between group" href="#">
+                                        <span
+                                            class="text-lg font-bold group-hover:underline decoration-4 decoration-primary">LinkedIn</span>
+                                        <span
+                                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex items-center justify-between group" href="#">
+                                        <span
+                                            class="text-lg font-bold group-hover:underline decoration-4 decoration-primary">GitHub</span>
+                                        <span
+                                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">code</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex items-center justify-between group" href="#">
+                                        <span
+                                            class="text-lg font-bold group-hover:underline decoration-4 decoration-primary">Twitter
+                                            / X</span>
+                                        <span
+                                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">alternate_email</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex items-center justify-between group" href="#">
+                                        <span
+                                            class="text-lg font-bold group-hover:underline decoration-4 decoration-primary">Instagram</span>
+                                        <span
+                                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">photo_camera</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Map / Location Block -->
+                        <div
+                            class="bg-yellow-300 border-4 border-black p-4 shadow-neo transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span class="font-bold uppercase">Based In</span>
+                            </div>
+                            <div
+                                class="h-32 w-full border-2 border-black bg-slate-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all">
+                                <img alt="Jakarta city skyline with modern buildings" class="object-cover w-full h-full"
+                                    data-location="Jakarta, Indonesia"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPeYLVxfBldevWDSkQi8sOdiJIF-H5H6_SP1OvkffcP-N03Gyq4En6gp6JHEeJVKJxsy9pjcDA7TG6mnilILrm2yrCxQlfX6Mex_-KofJi4-N-ZfDTOq3ajImcfCecvqjpKbx0Q9KNnZHBPj0WK4RzeMYUd0Ac9NzwXR4emhuXpBCnau0btMTnA2_8v5pwjOZI_-w5CcQw2F2FcTHNTdG0B7X32ghOTHTfE0gAmFEFOaCeEW8RBdnmxtJ_4tcj4-Nva976KOhIQ9A" />
+                                <div class="absolute bottom-0 left-0 bg-black text-white px-2 py-0.5 text-xs font-bold">
+                                    Jakarta, ID</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t-4 border-black mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="font-bold text-black text-sm uppercase">© 2024 Muhammad Yasir Arafat.</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm font-bold uppercase">Back to Top</span>
+                        <button
+                            class="w-10 h-10 border-2 border-black bg-white flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                            <span class="material-symbols-outlined">arrow_upward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

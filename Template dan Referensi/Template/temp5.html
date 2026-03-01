@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Origin Story - About Me</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4d125",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Comic Book Texture */
+        .comic-bg {
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark .comic-bg {
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+        }
+
+        /* Comic Border Style */
+        .comic-border {
+            border: 3px solid #1c190d;
+            box-shadow: 5px 5px 0px #1c190d;
+        }
+
+        .dark .comic-border {
+            border-color: #f4d125;
+            box-shadow: 5px 5px 0px #f4d125;
+        }
+
+        /* Speech Bubble Triangle */
+        .speech-triangle::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            display: block;
+            width: 0;
+        }
+
+        .dark .speech-triangle::after {
+            border-color: #221f10 transparent;
+        }
+
+        /* Panel hover effect */
+        .comic-panel {
+            transition: transform 0.2s ease;
+        }
+
+        .comic-panel:hover {
+            transform: scale(1.01);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col overflow-x-hidden comic-bg">
+    <!-- Header -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b-4 border-black dark:border-primary bg-background-light dark:bg-background-dark px-10 py-4 sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <div class="size-8 text-black dark:text-primary">
+                <span class="material-symbols-outlined text-4xl">local_fire_department</span>
+            </div>
+            <h2 class="text-2xl font-black uppercase tracking-tight italic">DevHero<span
+                    class="text-primary">.Origin</span></h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8 hidden md:flex">
+            <nav class="flex items-center gap-9">
+                <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="#">Home Base</a>
+                <a class="text-sm font-bold uppercase text-primary border-b-2 border-primary" href="#">Origin Story</a>
+                <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="#">Missions</a>
+                <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="#">Signal Me</a>
+            </nav>
+            <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-6 bg-primary text-black text-sm font-bold border-2 border-black hover:bg-yellow-400 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all">
+                <span class="truncate uppercase">Hire Hero</span>
+            </button>
+        </div>
+        <button class="md:hidden text-black dark:text-white">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-[1200px] mx-auto p-4 md:p-8">
+        <!-- Title Section -->
+        <section class="mb-10 text-center relative">
+            <div
+                class="absolute -top-6 -left-4 text-6xl text-primary/20 font-black select-none pointer-events-none rotate-[-5deg]">
+                ISSUE #1</div>
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-2 text-shadow-sm">
+                Secret Identity: <span class="bg-primary px-2 text-black skew-x-[-10deg] inline-block">The Origin
+                    Story</span>
+            </h1>
+            <p class="text-lg md:text-xl font-medium text-slate-600 dark:text-slate-300 max-w-2xl mx-auto italic">
+                "The untold tale of how a mere mortal became a code-slinging hero."
+            </p>
+        </section>
+        <!-- Comic Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
+            <!-- Panel 1: The Flashback -->
+            <div
+                class="comic-panel relative group col-span-1 row-span-1 bg-amber-50 dark:bg-stone-900 border-4 border-black dark:border-slate-600 shadow-[8px_8px_0px_rgba(0,0,0,0.2)] overflow-hidden">
+                <div class="absolute top-0 left-0 bg-yellow-100 border-b-2 border-r-2 border-black px-3 py-1 z-20">
+                    <span class="font-bold text-xs uppercase tracking-widest text-black">Panel 1: The Spark</span>
+                </div>
+                <div class="h-64 md:h-80 w-full relative">
+                    <!-- Sepia Filter Overlay -->
+                    <div class="absolute inset-0 bg-amber-900/20 mix-blend-multiply pointer-events-none z-10"></div>
+                    <div class="w-full h-full bg-cover bg-center grayscale contrast-125"
+                        data-alt="Vintage computer setup in dim room"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDi9AFU96FfzpcU2VKeEkLto3xtAJNQvHUQvhvztTkPWreuHhvtvy-QOqyUYb11MmuB4LJap_ukCyBKsiFQA_Y7rPQICZUOvUWAWC0_cIF-T-1waWphZs1Fa0srxWwrf1wKWUEZ6guRqxO2mxTY-JPj65HA2Usf-IpxM4nxgPzaylkFyPVTF5KfJm0tApM5LVNRwKWbvH8TM5Q7ZZaMTdM_bdaNjiHWvcRNMvDW8Uhl5OtXo18-3RhxF7YNZBZR5qbkQVO2Vu4D8K-p');">
+                    </div>
+                    <!-- Caption Box -->
+                    <div
+                        class="absolute bottom-4 left-4 right-4 bg-white dark:bg-slate-800 border-2 border-black p-3 z-20 speech-triangle shadow-md">
+                        <p class="text-sm font-medium leading-tight">
+                            <span class="font-bold text-primary dark:text-yellow-500">YEAR 2012.</span> It started in a
+                            basement. The glow of a CRT monitor... the blinking cursor was calling my name.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Panels 2 & 3: The Transformation (Spans 2 columns) -->
+            <div
+                class="comic-panel relative col-span-1 md:col-span-2 row-span-1 bg-white dark:bg-slate-800 border-4 border-black dark:border-primary shadow-[8px_8px_0px_rgba(0,0,0,0.2)] overflow-hidden flex flex-col">
+                <div class="absolute top-0 right-0 bg-primary border-b-2 border-l-2 border-black px-3 py-1 z-20">
+                    <span class="font-bold text-xs uppercase tracking-widest text-black">The Awakening</span>
+                </div>
+                <div class="flex-1 flex flex-col md:flex-row h-full">
+                    <div class="w-full md:w-1/2 h-64 md:h-80 bg-cover bg-center border-b-4 md:border-b-0 md:border-r-4 border-black relative"
+                        data-alt="Developer working intently at desk"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7GnMl2MWr1ElQCMIrpNguIoRvTTOkcRYRHla9BXMbe0q94PQlN1Ig8ac1R9Y7uuzsn_gFLWJt_VW9h8QmXU65e-cr2ZJ9yqCa3mrVA3-rRk64nULve9dlgaCuxKf2iwmwTYUgcFOvdOWh3Tjh88m1tpTBp6toG4sq2tjbKzzA8vc4aJcviJ9BQ4XdJx6fb-d4o_W4Kta4hszMKW0WpF1WT8XNDy3KZfpCzRTnO7hU5fC7_uNKK062AU0WNHAKbaZjbnh0LwZfXa5n');">
+                        <div class="absolute top-4 left-4">
+                            <div
+                                class="bg-white border-2 border-black rounded-full px-4 py-2 font-bold text-xs uppercase shadow-sm">
+                                Just a mortal...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 h-64 md:h-80 bg-cover bg-center relative"
+                        data-alt="Futuristic cyber code matrix background"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPdeLqELDorqbihTRQBMlJN_Jo6OMXH3jOVQGZMp2Qn7q-BKqLvTCIgRZDXByZ3YiNjC6eASSdbvj-ShbbWPCOGkTJk0D7A4TfB0YzXd2ezBxxAjCpBLhvGSIH_UMqQdMNRIDEfy-dnYENP-Nex0VJ1VbseH84_WGjTm3N_jBTLD597AV6gAeG9-zkHj0OKvbo1GiyEGKius_DVGy8ATE-bycF8hMQDGD73JGaZTxy-2_VPfw039u_j0bTMntB8AgyOznFFoypf6wA');">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                            <div class="text-black transform -rotate-1">
+                                <h3 class="text-3xl font-black uppercase italic leading-none mb-1">Pixel Perfect!</h3>
+                                <p class="font-bold bg-white inline-block px-2 border border-black">Mastering the DOM!
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Sound Effect -->
+                        <div
+                            class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 z-30 hidden md:block">
+                            <h2 class="text-5xl font-black text-primary stroke-black tracking-tighter"
+                                style="-webkit-text-stroke: 2px black;">KA-POW!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-yellow-100 dark:bg-slate-900 border-t-4 border-black">
+                    <p class="text-sm md:text-base font-medium">
+                        <span class="font-bold">NARRATOR:</span> By day, I was studying the ancient scrolls of
+                        documentation. By night, I was fighting bugs and deploying solutions to the cloud. The
+                        transformation was complete.
+                    </p>
+                </div>
+            </div>
+            <!-- Panel 4: The Mission (Values) -->
+            <div
+                class="comic-panel col-span-1 row-span-1 bg-primary border-4 border-black dark:border-white shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_rgba(255,255,255,0.5)] p-6 flex flex-col justify-center relative overflow-hidden">
+                <!-- Halftone Pattern Overlay -->
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(black 2px, transparent 2px); background-size: 8px 8px;">
+                </div>
+                <div class="relative z-10 text-center">
+                    <div class="inline-block bg-black text-white px-3 py-1 text-sm font-bold uppercase mb-4 -rotate-2">
+                        Mission Objective
+                    </div>
+                    <h3 class="text-3xl font-black text-black uppercase leading-none mb-4 italic">Clean Code.<br />Fast
+                        Load.</h3>
+                    <p class="font-medium text-black text-sm">
+                        "My code is my shield. Accessibility is my sword. I strive to make the web a safer, faster place
+                        for citizens everywhere."
+                    </p>
+                </div>
+                <div class="absolute -bottom-6 -right-6 text-black opacity-10">
+                    <span class="material-symbols-outlined text-9xl">shield</span>
+                </div>
+            </div>
+            <!-- Panel 5: Tools of the Trade -->
+            <div
+                class="comic-panel col-span-1 row-span-1 bg-slate-800 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,0.2)] p-6 relative">
+                <div class="absolute top-0 right-0 bg-white border-b-2 border-l-2 border-black px-3 py-1 z-20">
+                    <span class="font-bold text-xs uppercase tracking-widest text-black">Arsenal</span>
+                </div>
+                <div class="h-full flex flex-col justify-between">
+                    <h3
+                        class="text-white text-xl font-bold uppercase border-b-2 border-dashed border-slate-600 pb-2 mb-4">
+                        Gadgets &amp; Gear</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-slate-700 p-2 border border-slate-500 rounded text-center">
+                            <span class="material-symbols-outlined text-primary block mb-1">javascript</span>
+                            <span class="text-xs text-white font-bold uppercase">JS / TS</span>
+                        </div>
+                        <div class="bg-slate-700 p-2 border border-slate-500 rounded text-center">
+                            <span class="material-symbols-outlined text-blue-400 block mb-1">css</span>
+                            <span class="text-xs text-white font-bold uppercase">Tailwind</span>
+                        </div>
+                        <div class="bg-slate-700 p-2 border border-slate-500 rounded text-center">
+                            <span class="material-symbols-outlined text-green-400 block mb-1">terminal</span>
+                            <span class="text-xs text-white font-bold uppercase">Node</span>
+                        </div>
+                        <div class="bg-slate-700 p-2 border border-slate-500 rounded text-center">
+                            <span class="material-symbols-outlined text-orange-400 block mb-1">database</span>
+                            <span class="text-xs text-white font-bold uppercase">SQL</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <div class="text-primary text-xs uppercase font-bold tracking-widest animate-pulse">System
+                            Online</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel 6: Top Secret File (Resume/Contact) -->
+            <div
+                class="comic-panel col-span-1 lg:col-span-1 row-span-1 bg-[#f0e6d2] border-4 border-black dark:border-primary shadow-[8px_8px_0px_rgba(0,0,0,0.2)] relative rotate-1">
+                <!-- Paperclip visual -->
+                <div
+                    class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-4 h-10 bg-gray-400 rounded-full border-2 border-black z-20">
+                </div>
+                <div class="p-6 h-full flex flex-col items-center justify-center text-center">
+                    <div
+                        class="bg-red-700 text-white text-xs font-bold uppercase px-2 py-1 mb-4 border border-black rotate-[-5deg] shadow-sm">
+                        Top Secret
+                    </div>
+                    <div class="w-24 h-24 bg-gray-300 border-2 border-black rounded-full mb-4 overflow-hidden">
+                        <img alt="Profile avatar" class="w-full h-full object-cover sepia"
+                            data-alt="Sepia toned profile portrait of developer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8YlsvXtL2qTLAPEA9cqGXjjzdjTNhEAUK_e010GxPZvwAtvq_DaIj_mToitYPM6KK_DG29nPiG-P1FpEGUXCJk23F5rUHN6RmLK4JPe3HPS8tztUk3KBIKe_uhO3O5Sp0LLomYbiasZwb8tq1eNZrbXteCv_z5qvTx41xB9Fie6u-3GyLus_QgsnxKLr8OIxm56FPArKOmhP2wrPskdbRWzsZGNGuXy4Cq5qU98k4oSHZjTu0g0O0A1A9aR1yejbL_BSUcdQc01i" />
+                    </div>
+                    <h3 class="text-xl font-black text-black uppercase underline decoration-2 underline-offset-4 mb-2">
+                        Agent Details</h3>
+                    <ul
+                        class="text-sm text-left w-full space-y-2 mb-6 font-mono border-t border-b border-black/20 py-4">
+                        <li class="flex justify-between"><span>Location:</span> <span class="font-bold">Metropolis
+                                (NYC)</span></li>
+                        <li class="flex justify-between"><span>Status:</span> <span
+                                class="font-bold text-green-700">Available</span></li>
+                        <li class="flex justify-between"><span>XP Level:</span> <span class="font-bold">Lvl. 5
+                                Senior</span></li>
+                    </ul>
+                    <button
+                        class="w-full bg-black hover:bg-slate-800 text-white font-bold py-2 px-4 rounded border-2 border-transparent hover:border-primary transition-colors uppercase text-sm flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">download</span>
+                        Access Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Navigation / Next Issue Teaser -->
+        <section class="mt-12 flex justify-between items-center border-t-4 border-black dark:border-slate-700 pt-6">
+            <div class="flex flex-col">
+                <span class="text-xs font-bold uppercase text-slate-500 tracking-widest">Next Issue</span>
+                <a class="text-xl font-black uppercase hover:text-primary transition-colors flex items-center gap-2 group"
+                    href="#">
+                    <span class="group-hover:-translate-x-1 transition-transform">←</span>
+                    Review Past Missions
+                </a>
+            </div>
+            <div class="flex flex-col items-end">
+                <span class="text-xs font-bold uppercase text-slate-500 tracking-widest">Contact</span>
+                <a class="text-xl font-black uppercase hover:text-primary transition-colors flex items-center gap-2 group"
+                    href="#">
+                    Send Signal
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black text-white py-8 text-center border-t-4 border-primary mt-10">
+        <p class="font-mono text-sm opacity-60">© 2023 DevHero Universe. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

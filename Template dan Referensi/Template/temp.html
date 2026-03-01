@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Comic Book Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FFD700", // Comic Yellow
+                        secondary: "#FF4D4D", // Comic Red
+                        accent: "#256af4", // Comic Blue
+                        dark: "#101623",
+                        "comic-black": "#000000",
+                        "comic-white": "#ffffff",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'comic': '4px 4px 0px 0px #000000',
+                        'comic-hover': '2px 2px 0px 0px #000000',
+                        'comic-lg': '8px 8px 0px 0px #000000',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .halftone-pattern {
+            background-image: radial-gradient(#000 20%, transparent 20%), radial-gradient(#000 20%, transparent 20%);
+            background-color: #ffffff;
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body class="bg-dark font-display text-white overflow-x-hidden selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 z-0 bg-[#101623]">
+            <div class="absolute inset-0 halftone-pattern opacity-[0.05] pointer-events-none"></div>
+        </div>
+        <div class="layout-container flex h-full grow flex-col relative z-10">
+            <!-- Navbar -->
+            <header class="sticky top-0 z-50 w-full border-b-4 border-black bg-accent px-4 py-3 shadow-comic">
+                <div class="mx-auto flex max-w-[1200px] items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="flex size-10 items-center justify-center rounded-full border-2 border-black bg-primary text-black shadow-comic">
+                            <span class="material-symbols-outlined text-2xl font-bold">bolt</span>
+                        </div>
+                        <h2
+                            class="text-xl font-black uppercase tracking-wider text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                            ADVENTURES OF DEV
+                        </h2>
+                    </div>
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="group relative px-2 py-1 font-bold text-white transition-transform hover:-translate-y-0.5"
+                            href="#">
+                            <span class="relative z-10">ORIGIN STORY</span>
+                            <span
+                                class="absolute inset-0 -z-10 skew-x-[-12deg] bg-black opacity-0 transition-opacity group-hover:opacity-100"></span>
+                        </a>
+                        <a class="group relative px-2 py-1 font-bold text-white transition-transform hover:-translate-y-0.5"
+                            href="#">
+                            <span class="relative z-10">SUPER POWERS</span>
+                            <span
+                                class="absolute inset-0 -z-10 skew-x-[-12deg] bg-black opacity-0 transition-opacity group-hover:opacity-100"></span>
+                        </a>
+                        <a class="group relative px-2 py-1 font-bold text-white transition-transform hover:-translate-y-0.5"
+                            href="#">
+                            <span class="relative z-10">EPIC QUESTS</span>
+                            <span
+                                class="absolute inset-0 -z-10 skew-x-[-12deg] bg-black opacity-0 transition-opacity group-hover:opacity-100"></span>
+                        </a>
+                    </nav>
+                    <button
+                        class="hidden md:flex items-center justify-center rounded-none border-2 border-black bg-primary px-6 py-2 text-sm font-black uppercase tracking-wide text-black shadow-comic transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-comic-hover active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
+                        HIRE ME
+                    </button>
+                    <!-- Mobile Menu Icon -->
+                    <button class="md:hidden text-white border-2 border-black bg-black p-1">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </header>
+            <main class="flex flex-1 flex-col items-center px-4 py-10 md:px-10">
+                <div class="layout-content-container flex w-full max-w-[1000px] flex-col gap-16">
+                    <!-- Hero Section -->
+                    <section class="@container">
+                        <div
+                            class="flex flex-col gap-8 rounded-xl border-4 border-black bg-white p-6 shadow-comic-lg md:flex-row md:items-center md:gap-12 md:p-10 relative overflow-hidden">
+                            <!-- Decorative corner flash -->
+                            <div
+                                class="absolute -right-12 -top-12 h-32 w-32 rotate-45 bg-primary border-b-4 border-black">
+                            </div>
+                            <div class="relative w-full shrink-0 md:w-[45%]">
+                                <div class="aspect-square w-full overflow-hidden rounded-lg border-4 border-black bg-secondary shadow-comic"
+                                    data-alt="Comic style avatar of developer in heroic pose"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOHGvLNOwlQEGK1FqQD7nrmwC7cMHrViIpINh85l3BylX9Z5kmF6Jvi89IMIfiHDhvWlX__WAa41mRwzub1qO7XLqofu2KNKqezZY3wue8nbAPmqK_dPpJ7b3k60F_MKHEHk_dAJJQCIofBdOGWu-yKRbWhwwRljfv86Nhoj-TvHx4j_L72d7gh_bwJq7IN0iZMXPdnSKNGglEAdlFoOr_CNY5UgsQZ79duwyJPCIJfQAm4QLku5zTrTrPpVktoQZAYbHtnSVPL2Sh"); background-size: cover; background-position: center;'>
+                                </div>
+                                <!-- Speech Bubble -->
+                                <div
+                                    class="absolute -right-4 -top-6 hidden md:block w-40 bg-white p-3 text-center text-xs font-bold text-black border-2 border-black rounded-[50%] shadow-comic">
+                                    "I code for justice!"
+                                    <div
+                                        class="absolute bottom-[-10px] left-4 h-4 w-4 bg-white border-r-2 border-b-2 border-black rotate-45">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-6">
+                                <div class="space-y-2">
+                                    <div
+                                        class="inline-block bg-primary px-3 py-1 text-xs font-black uppercase text-black border-2 border-black rotate-[-2deg]">
+                                        Issue #1: The Awakening
+                                    </div>
+                                    <h1
+                                        class="text-5xl font-black uppercase leading-[0.9] tracking-tighter text-black md:text-7xl drop-shadow-[3px_3px_0px_rgba(255,215,0,1)]">
+                                        THE ADVENTURES OF <span class="text-accent">ALEX CODE</span>
+                                    </h1>
+                                    <p
+                                        class="text-lg font-medium leading-relaxed text-black/80 md:text-xl border-l-4 border-black pl-4">
+                                        Fighting bugs and deploying features in a single bound! Welcome to the digital
+                                        comic universe of a full-stack hero.
+                                    </p>
+                                </div>
+                                <div class="flex flex-wrap gap-4">
+                                    <button
+                                        class="flex items-center justify-center rounded-none border-2 border-black bg-secondary px-6 py-3 text-base font-black uppercase tracking-wide text-white shadow-comic transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-comic-hover">
+                                        Start Reading
+                                    </button>
+                                    <button
+                                        class="flex items-center justify-center rounded-none border-2 border-black bg-white px-6 py-3 text-base font-black uppercase tracking-wide text-black shadow-comic transition-all hover:bg-gray-100 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-comic-hover">
+                                        Download Issue #1 (CV)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Super Powers (Skills) -->
+                    <section class="flex flex-col gap-8">
+                        <div
+                            class="flex flex-col gap-4 border-b-4 border-black pb-4 md:flex-row md:items-end md:justify-between">
+                            <div>
+                                <h2
+                                    class="text-4xl font-black uppercase italic tracking-tight text-white drop-shadow-[3px_3px_0px_#FF4D4D] md:text-5xl">
+                                    SUPER POWERS
+                                </h2>
+                                <p class="mt-2 max-w-lg text-lg text-gray-300 font-bold">Every hero has a unique set of
+                                    skills to save the day (and the database).</p>
+                            </div>
+                            <button
+                                class="self-start md:self-end text-primary font-bold hover:underline flex items-center gap-1">
+                                See All Skills <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            <!-- Skill Card 1 -->
+                            <div
+                                class="group relative flex flex-col gap-4 border-4 border-black bg-primary p-6 shadow-comic transition-transform hover:-translate-y-2">
+                                <div
+                                    class="absolute -right-3 -top-3 flex size-12 items-center justify-center rounded-full border-2 border-black bg-white text-black shadow-sm z-10">
+                                    <span class="material-symbols-outlined text-3xl">bolt</span>
+                                </div>
+                                <div
+                                    class="bg-black/10 absolute inset-0 transform skew-y-2 origin-bottom-left -z-0 h-full w-full opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <h3 class="relative z-10 text-xl font-black uppercase text-black">Super Speed Coding
+                                </h3>
+                                <p class="relative z-10 text-sm font-bold text-black/80">Delivering lightning-fast React
+                                    components before you can blink. Optimized for maximum velocity.</p>
+                            </div>
+                            <!-- Skill Card 2 -->
+                            <div
+                                class="group relative flex flex-col gap-4 border-4 border-black bg-secondary p-6 shadow-comic transition-transform hover:-translate-y-2">
+                                <div
+                                    class="absolute -right-3 -top-3 flex size-12 items-center justify-center rounded-full border-2 border-black bg-white text-black shadow-sm z-10">
+                                    <span class="material-symbols-outlined text-3xl">shield</span>
+                                </div>
+                                <h3 class="text-xl font-black uppercase text-white">Indestructible Backend</h3>
+                                <p class="text-sm font-bold text-white/90">Building robust servers that can withstand
+                                    any traffic spike. Security is my middle name.</p>
+                            </div>
+                            <!-- Skill Card 3 -->
+                            <div
+                                class="group relative flex flex-col gap-4 border-4 border-black bg-accent p-6 shadow-comic transition-transform hover:-translate-y-2">
+                                <div
+                                    class="absolute -right-3 -top-3 flex size-12 items-center justify-center rounded-full border-2 border-black bg-white text-black shadow-sm z-10">
+                                    <span class="material-symbols-outlined text-3xl">psychology</span>
+                                </div>
+                                <h3 class="text-xl font-black uppercase text-white">Telepathic UX</h3>
+                                <p class="text-sm font-bold text-white/90">Predicting user behavior to create seamless
+                                    and intuitive interfaces. It's almost like reading minds.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Epic Quests (Projects) -->
+                    <section class="flex flex-col gap-8">
+                        <div
+                            class="flex flex-col gap-4 border-b-4 border-black pb-4 md:flex-row md:items-end md:justify-between">
+                            <div>
+                                <h2
+                                    class="text-4xl font-black uppercase italic tracking-tight text-white drop-shadow-[3px_3px_0px_#256af4] md:text-5xl">
+                                    EPIC QUESTS
+                                </h2>
+                                <p class="mt-2 max-w-lg text-lg text-gray-300 font-bold">Browse the archives of
+                                    legendary projects completed for citizens of the web.</p>
+                            </div>
+                            <button
+                                class="self-start md:self-end text-primary font-bold hover:underline flex items-center gap-1">
+                                View All Quests <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                            <!-- Project 1 -->
+                            <article class="flex flex-col border-4 border-black bg-white shadow-comic">
+                                <div
+                                    class="relative aspect-video w-full border-b-4 border-black bg-gray-200 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Screenshot of an e-commerce website interface"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGGIhf2JvURUK_T6eVUWsQiAhUGb29l96IIhPcFWsQ798M3ilshdoEvW6_036yoCnhbQV6AhzWNaF6xlpluHlVcwg1v4GlTpBCLQrSfnJx_JI_-1Ii3-Dz_YRGOinv-nTtqRi4IAqVypUw1sSGvttXo2LAGHDlPOgym1m2Jgz04jWXRiHpxvys0msxXTUhv4Sy9URBLOk9TvyQV4DNY6LjXuOY09QyPovQxr3uEodstr01wVGS0_-hwoQtvafUzbKsZs9xQgmsqhk8");'>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-primary px-2 py-1 text-xs font-black uppercase text-black border-2 border-black rotate-[-3deg]">
+                                        Retail
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 p-5">
+                                    <h3 class="text-xl font-black uppercase text-black">The E-Commercer</h3>
+                                    <p class="text-sm font-medium text-black/70">A massive online store built to handle
+                                        millions of transactions without breaking a sweat.</p>
+                                </div>
+                            </article>
+                            <!-- Project 2 -->
+                            <article class="flex flex-col border-4 border-black bg-white shadow-comic">
+                                <div
+                                    class="relative aspect-video w-full border-b-4 border-black bg-gray-200 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Screenshot of a social networking application dashboard"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyLb1I0eqAqxOwZrxK9lOtAJiw2alOV9mNxn2jQ3wLFw_5WqGqJ3Plg9aRQ7yaEPr5krkgRqgpsE6G9q_dFYA4sZ2zzuuObjaGqFXuiMoAFNID2Vav-cOEJ9nqbNqr6qmdlnwQOk6FuDmBftHlF5TKELA8_rIDyKBxi6NePYJTqRfK_ZPE2LXKYvikyY5DyS9vivZ-CEi1DgItJcKVTuooVk9KrtxIJ356TChf3CRGU26rkJrTQRru1gi6_2vw6KIRqz6raW2A-L9P");'>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-secondary px-2 py-1 text-xs font-black uppercase text-white border-2 border-black rotate-[2deg]">
+                                        Social
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 p-5">
+                                    <h3 class="text-xl font-black uppercase text-black">Social Net-Web</h3>
+                                    <p class="text-sm font-medium text-black/70">A platform connecting heroes across the
+                                        globe to share their triumphs and defeats.</p>
+                                </div>
+                            </article>
+                            <!-- Project 3 -->
+                            <article class="flex flex-col border-4 border-black bg-white shadow-comic">
+                                <div
+                                    class="relative aspect-video w-full border-b-4 border-black bg-gray-200 overflow-hidden group">
+                                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        data-alt="Screenshot of a portfolio website design"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6bCtD3WlF8ukQxilYsaQA2_h5595GMdauMkm_txVJjRpEm19UGOcjo7XlWps1aJF5VVfXGrxLKNs6v-6l3LyP9oSjSn-yStKHqoFftAka2B3IavcWe7YSK5Lzu5igho4LhhMoY7Nikmha38A7UZvPFXAqhUK5e4X9RNdEcQzEBmSQDtEZk1uYeX-KyxW74vWwol7_k3v4DOJoj1SFfkAhpkwLNA_LjT4Yz4i-ULrfyH5xk91Q0L3GWGx3voZ8EnfpXx-8VKh6nMZg");'>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-2 right-2 bg-accent px-2 py-1 text-xs font-black uppercase text-white border-2 border-black rotate-[-1deg]">
+                                        Personal
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 p-5">
+                                    <h3 class="text-xl font-black uppercase text-black">The Portfolio Avenger</h3>
+                                    <p class="text-sm font-medium text-black/70">The very site you are looking at right
+                                        now! Meta, isn't it?</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- CTA Section -->
+                    <section
+                        class="relative mt-10 overflow-hidden rounded-xl border-4 border-black bg-primary px-6 py-16 text-center shadow-comic-lg md:px-20">
+                        <div class="absolute inset-0 opacity-10 halftone-pattern pointer-events-none"></div>
+                        <!-- Comic Action Bursts -->
+                        <div class="absolute -left-10 -top-10 h-32 w-32 rotate-12 bg-white border-4 border-black"></div>
+                        <div
+                            class="absolute -right-10 -bottom-10 h-40 w-40 rotate-45 bg-secondary border-4 border-black">
+                        </div>
+                        <div class="relative z-10 flex flex-col items-center gap-6">
+                            <h2
+                                class="max-w-2xl text-4xl font-black uppercase leading-tight text-black md:text-6xl drop-shadow-[2px_2px_0px_#ffffff]">
+                                NEED A HERO?
+                            </h2>
+                            <p class="max-w-xl text-lg font-bold text-black/80">
+                                Send a distress signal and I'll fly over to help build your next big idea. No cape
+                                required.
+                            </p>
+                            <button
+                                class="mt-4 flex min-w-[200px] items-center justify-center border-4 border-black bg-white px-8 py-4 text-xl font-black uppercase tracking-wider text-black shadow-comic transition-all hover:-translate-y-1 hover:bg-black hover:text-white hover:shadow-comic-lg">
+                                CONTACT NOW
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="mt-10 border-t-4 border-black bg-black py-8 text-center">
+                <p class="text-sm font-bold text-white/60 uppercase tracking-widest">
+                    © 2023 Adventures of Dev. All rights reserved. Printed in the World Wide Web.
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

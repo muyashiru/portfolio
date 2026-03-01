@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Comic Letter Column Contact Page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Bangers&amp;family=Comic+Neue:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f42525",
+                        "background-light": "#fcf8f0", // Slightly yellowed paper tone
+                        "background-dark": "#221010",
+                        "comic-yellow": "#f9e54e",
+                        "comic-blue": "#4eaef9",
+                        "paper-texture": "#f5f0e1",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "comic": ["Bangers", "display"],
+                        "hand": ["Comic Neue", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                    backgroundImage: {
+                        'halftone': 'radial-gradient(circle, #ddd 1px, transparent 1.5px)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom Comic Styles */
+        .comic-shadow {
+            box-shadow: 4px 4px 0px #000000;
+        }
+
+        .comic-shadow-sm {
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        .comic-border {
+            border: 3px solid #000000;
+        }
+
+        .halftone-bg {
+            background-size: 10px 10px;
+            background-image: radial-gradient(#d1c4a5 20%, transparent 20%), radial-gradient(#d1c4a5 20%, transparent 20%);
+            background-position: 0 0, 5px 5px;
+        }
+
+        .speech-bubble {
+            position: relative;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #ffffff;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -10px;
+            margin-bottom: -20px;
+            transform: skewX(-10deg);
+            z-index: 20;
+        }
+
+        .speech-bubble-border::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            /* border width */
+            left: 20%;
+            width: 0;
+            height: 0;
+            border: 24px solid transparent;
+            /* slightly larger for border effect */
+            border-top-color: #000000;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -12px;
+            margin-bottom: -20px;
+            transform: skewX(-10deg);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b-4 border-black bg-white px-6 md:px-10 py-4 relative z-50">
+        <div class="flex items-center gap-4 text-black">
+            <div class="size-8 text-primary">
+                <span class="material-symbols-outlined text-[32px]">menu_book</span>
+            </div>
+            <h2 class="text-black text-2xl font-comic tracking-wider">MY COMIC PORTFOLIO</h2>
+        </div>
+        <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+            <div class="flex items-center gap-6">
+                <a class="text-black text-lg font-bold hover:text-primary transition-colors uppercase font-comic tracking-wide"
+                    href="#">Home</a>
+                <a class="text-black text-lg font-bold hover:text-primary transition-colors uppercase font-comic tracking-wide"
+                    href="#">Issues</a>
+                <a class="text-black text-lg font-bold hover:text-primary transition-colors uppercase font-comic tracking-wide"
+                    href="#">Villains</a>
+                <a class="text-black text-lg font-bold text-primary underline decoration-wavy decoration-2 underline-offset-4 uppercase font-comic tracking-wide"
+                    href="#">Letters</a>
+            </div>
+            <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-base font-comic tracking-widest comic-shadow hover:translate-y-[2px] hover:shadow-none transition-all border-2 border-black">
+                HIRE ME
+            </button>
+        </div>
+        <button class="md:hidden text-black">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+    <!-- Main Content Area -->
+    <main class="flex-1 w-full bg-[#fcf8f0] relative">
+        <!-- Halftone Overlay -->
+        <div class="absolute inset-0 halftone-bg opacity-30 pointer-events-none z-0"></div>
+        <div class="relative z-10 w-full max-w-6xl mx-auto px-4 py-8 md:py-12 flex flex-col">
+            <!-- Page Title Section -->
+            <div class="text-center mb-12 relative">
+                <div
+                    class="inline-block bg-comic-yellow border-4 border-black px-8 py-4 transform -rotate-2 comic-shadow">
+                    <h1 class="text-5xl md:text-7xl font-comic text-black leading-none drop-shadow-sm">
+                        LETTERS TO THE <span class="text-primary italic">WEB-HEAD</span>
+                    </h1>
+                </div>
+                <p
+                    class="mt-6 text-xl font-hand font-bold text-slate-800 max-w-2xl mx-auto bg-white/80 p-2 border-2 border-dashed border-slate-400 transform rotate-1">
+                    "Got a bug report? A feature request? Or just want to tell me my code is spectacular? Drop a line
+                    below, true believers!"
+                </p>
+            </div>
+            <!-- Comic Page Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Left Column: The Form (The "Letter") -->
+                <div class="lg:col-span-7 flex flex-col gap-8">
+                    <!-- Panel 1: Name Input -->
+                    <div class="relative group">
+                        <div class="flex items-end gap-4 mb-2">
+                            <span
+                                class="bg-black text-white px-2 py-1 font-comic text-lg uppercase transform -rotate-3">Panel
+                                1</span>
+                            <h3 class="font-comic text-2xl uppercase text-slate-900">Identity Reveal</h3>
+                        </div>
+                        <div
+                            class="bg-white border-[3px] border-black p-6 comic-shadow rounded-tl-none rounded-br-3xl speech-bubble-border speech-bubble relative">
+                            <label class="block mb-2 font-comic text-xl text-slate-700 uppercase" for="name">Your Secret
+                                Identity (Name)</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-3 text-slate-400">person</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-50 border-2 border-slate-300 focus:border-black focus:ring-0 font-hand text-xl font-bold text-slate-900 placeholder:text-slate-400 dashed-border rounded-lg"
+                                    id="name" placeholder="e.g. Peter Parker" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 2: Email Input -->
+                    <div class="relative group ml-0 md:ml-12">
+                        <div class="flex items-end gap-4 mb-2 justify-end md:justify-start">
+                            <span
+                                class="bg-primary text-white px-2 py-1 font-comic text-lg uppercase transform rotate-2">Panel
+                                2</span>
+                            <h3 class="font-comic text-2xl uppercase text-slate-900">Signal Frequency</h3>
+                        </div>
+                        <div
+                            class="bg-comic-blue/20 border-[3px] border-black p-6 comic-shadow rounded-tr-none rounded-bl-3xl relative">
+                            <!-- Tail pointing right for visual variety (simulated) -->
+                            <label class="block mb-2 font-comic text-xl text-slate-700 uppercase" for="email">Digital
+                                Address (Email)</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-3 text-slate-400">mail</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-3 bg-white border-2 border-slate-300 focus:border-black focus:ring-0 font-hand text-xl font-bold text-slate-900 placeholder:text-slate-400 rounded-lg"
+                                    id="email" placeholder="spidey@dailybugle.com" type="email" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 3: Message Input -->
+                    <div class="relative group">
+                        <div class="flex items-end gap-4 mb-2">
+                            <span
+                                class="bg-comic-yellow text-black px-2 py-1 font-comic text-lg uppercase transform -rotate-1">Panel
+                                3</span>
+                            <h3 class="font-comic text-2xl uppercase text-slate-900">The Story</h3>
+                        </div>
+                        <div class="bg-white border-[3px] border-black p-6 comic-shadow h-64 flex flex-col">
+                            <label class="block mb-2 font-comic text-xl text-slate-700 uppercase" for="message">Your
+                                Message</label>
+                            <textarea
+                                class="flex-1 w-full p-4 bg-yellow-50/50 border-2 border-dashed border-slate-400 focus:border-black focus:ring-0 font-hand text-xl text-slate-900 resize-none rounded-lg"
+                                id="message" placeholder="Dear Web-Head, I noticed a bug in sector 4..."></textarea>
+                            <div class="mt-2 text-right">
+                                <span class="text-xs font-mono text-slate-500 bg-slate-200 px-1">MEANWHILE...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Button Area -->
+                    <div class="flex justify-end pt-4 pb-12 relative">
+                        <!-- Action Effect behind button -->
+                        <div
+                            class="absolute right-0 top-0 w-64 h-64 bg-yellow-400 rounded-full opacity-20 blur-xl animate-pulse pointer-events-none">
+                        </div>
+                        <button class="relative group transform hover:scale-105 transition-transform duration-200">
+                            <!-- Starburst shape simplified with clip-path or multiple rotated divs could work, here using a styled div -->
+                            <div class="absolute inset-0 bg-black translate-x-2 translate-y-2"
+                                style="clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);">
+                            </div>
+                            <div class="relative bg-primary text-white w-48 h-24 flex items-center justify-center font-comic text-5xl tracking-widest border-4 border-black z-10"
+                                style="clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);">
+                                BAM!
+                            </div>
+                            <span class="absolute -right-6 -top-6 text-black font-comic text-xl rotate-12">SEND
+                                IT!</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Column: Context/Sidebar (The "Editor's Note") -->
+                <div class="lg:col-span-5 flex flex-col gap-6 sticky top-8">
+                    <!-- Editor's Note Box -->
+                    <div class="bg-[#fffef0] border-[3px] border-black p-1 comic-shadow relative transform rotate-1">
+                        <div class="border-2 border-black border-dashed p-6 flex flex-col gap-4">
+                            <div
+                                class="bg-comic-yellow border-2 border-black inline-block px-3 py-1 self-start transform -rotate-2 -mt-10 mb-2">
+                                <span class="font-comic text-lg">EDITOR'S NOTE</span>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-24 h-24 shrink-0 bg-slate-200 border-2 border-black rounded-full overflow-hidden relative">
+                                    <!-- Placeholder for avatar -->
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Comic style portrait of a man reading a book"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiXA7cQsgBs6qfchCPJ5o-_iAb6PMGhQ2_2Gfgn3S2CQ6s7bWhDx93mkpi2TOIFJEojTvYBLxskxMj6b_JyTXqTl68iFtVoTFFaZTFCyF9kkV7pDN8_qKdPHLt1m2gq1fATd82dH_bBte748HAZjevDqHyK6ERC6qrCY7qsZFunWI-gfy5ZcFaXxYP_gAne3j5Gvn_EG2budoZQAqFq8BRx2dVsYdNXUsO_FzzFJ-MrjdZmsa1-cGlW3OjhsE70BPM1iI89NYNCU4V');">
+                                    </div>
+                                    <div class="absolute inset-0 bg-primary mix-blend-color opacity-20"></div>
+                                </div>
+                                <div>
+                                    <p class="font-hand text-lg font-bold leading-tight">
+                                        "Thanks for writing in! I read every single letter that comes to my secret
+                                        lair."
+                                    </p>
+                                    <p class="font-hand text-base mt-2 text-slate-600">
+                                        - The Developer
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="h-px bg-black w-full opacity-20 my-2"></div>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-black text-white p-2 rounded-full border-2 border-black">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-comic text-lg uppercase leading-none">Headquarters</p>
+                                        <p class="font-hand text-slate-700">Queens, New York</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-primary text-white p-2 rounded-full border-2 border-black">
+                                        <span class="material-symbols-outlined text-xl">call</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-comic text-lg uppercase leading-none">Hotline</p>
+                                        <p class="font-hand text-slate-700">+1 (555) WEB-SLING</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- "Advertisement" Block -->
+                    <div class="mt-8 opacity-90 hover:opacity-100 transition-opacity">
+                        <div
+                            class="border-[3px] border-black bg-white p-4 comic-shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+                            <div
+                                class="absolute -right-8 top-4 bg-primary text-white py-1 px-8 transform rotate-45 text-xs font-bold border border-white shadow-md">
+                                NEW!</div>
+                            <h4 class="font-comic text-2xl mb-2">CHECK OUT MY PROJECTS!</h4>
+                            <div
+                                class="w-full h-32 bg-slate-100 border-2 border-black mb-3 relative overflow-hidden group cursor-pointer">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Abstract colorful comic book pattern background"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHllav7RT71jv5Dwfgz66X8k5p9W8G8v_ZEorOhzgOLsPPn7XPHvNMZmCCeNkLFW3J9WA3hSXrUcx5k0gr9hXDM1l12X5D7lvTfxkdEGfZrjxMT_FIiHvFqgHHAze1PFLjiV2uUiS0jrszxowlBVyG-ee5p_p-qhMzN_VSNAh-wRFUw8CsnF2d5ePbrRkXqKF2YRp-lkqUHVR2lJbsQq8bwIFQYC_HjbMNMlw0MXeWzfaJ5kkYd_SLMMUCEtjo34OkTRzXv-KJwA35');">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span
+                                        class="bg-white border-2 border-black px-2 py-1 font-comic text-sm">VIEW</span>
+                                </div>
+                            </div>
+                            <p class="font-hand text-sm mb-3">See the amazing adventures of code and design in the
+                                latest issue!</p>
+                            <a class="text-primary font-bold font-comic underline decoration-2 uppercase" href="#">Read
+                                Issue #1 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Barcode / Issue Number -->
+            <div
+                class="mt-12 border-t-4 border-black pt-6 flex flex-col md:flex-row justify-between items-center gap-4 opacity-70">
+                <div class="font-mono text-xs tracking-[0.5em] uppercase">
+                    Issue #245 • Vol 1 • DEC 2023
+                </div>
+                <div class="h-12 w-48 bg-black"
+                    style="background: repeating-linear-gradient(90deg, #000 0px, #000 2px, transparent 2px, transparent 4px, #000 4px, #000 8px);">
+                </div>
+                <div class="font-comic text-sm text-slate-500">
+                    © 2023 Marvelous Designs Inc.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

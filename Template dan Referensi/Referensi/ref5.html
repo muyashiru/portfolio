@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Yasir Arafat - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f47b25",
+                        "secondary": "#2e6fdb",
+                        "accent": "#f9d030",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1a1a1a",
+                        "comic-black": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "comic": ["Bangers", "cursive"],
+                    },
+                    backgroundImage: {
+                        'halftone': "radial-gradient(circle, #2e6fdb 1px, transparent 1px)",
+                    },
+                    backgroundSize: {
+                        'halftone': '20px 20px',
+                    },
+                    boxShadow: {
+                        'comic': '5px 5px 0px 0px #121212',
+                        'comic-hover': '8px 8px 0px 0px #121212',
+                        'panel': '8px 8px 0px 0px rgba(0,0,0,1)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom shape classes for starbursts using clip-path */
+        .burst-shape {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .speech-bubble {
+            position: relative;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20%;
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            display: block;
+            width: 0;
+        }
+
+        /* Custom Comic Font helper */
+        .font-comic-title {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 w-full border-b-4 border-black bg-white px-6 py-4 shadow-comic">
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="flex size-10 items-center justify-center rounded-full border-2 border-black bg-primary text-white">
+                    <span class="material-symbols-outlined !text-3xl">bolt</span>
+                </div>
+                <h2 class="font-comic-title text-3xl text-black">Yasir Arafat</h2>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex gap-6">
+                    <a class="text-black text-lg font-bold hover:text-primary transition-colors" href="#">Origin</a>
+                    <a class="text-black text-lg font-bold hover:text-primary transition-colors"
+                        href="#">Superpowers</a>
+                    <a class="text-black text-lg font-bold hover:text-primary transition-colors" href="#">Projects</a>
+                    <a class="text-black text-lg font-bold hover:text-primary transition-colors" href="#">Contact</a>
+                </nav>
+                <button
+                    class="rounded-none border-2 border-black bg-accent px-6 py-2 text-lg font-bold text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all">
+                    RESUME
+                </button>
+            </div>
+            <button class="md:hidden text-black">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="relative w-full">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 z-0 bg-halftone bg-halftone opacity-10 pointer-events-none"></div>
+        <div class="layout-container relative z-10 flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-20 py-10 flex flex-1 justify-center">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <!-- Origin Story Section -->
+                    <section class="mb-24">
+                        <div class="relative mb-12 text-center">
+                            <h2 class="font-comic-title text-6xl text-black drop-shadow-[3px_3px_0_rgba(255,255,255,1)]"
+                                style="-webkit-text-stroke: 2px black;">
+                                ORIGIN STORY
+                            </h2>
+                            <div
+                                class="absolute -top-6 -right-4 rotate-12 bg-accent px-4 py-1 border-2 border-black shadow-comic">
+                                <span class="font-bold text-black">The Beginning!</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                            <!-- Panel 1: Academic -->
+                            <div class="group relative md:-rotate-2 hover:rotate-0 transition-transform duration-300">
+                                <div
+                                    class="absolute -top-16 left-1/2 -translate-x-1/2 w-64 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div
+                                        class="speech-bubble bg-white border-4 border-black p-4 rounded-xl shadow-comic text-center">
+                                        <p class="font-bold text-black uppercase text-sm">Top of the class!</p>
+                                    </div>
+                                </div>
+                                <div class="border-4 border-black bg-white p-2 shadow-panel">
+                                    <div
+                                        class="relative w-full aspect-[4/3] bg-black overflow-hidden border-2 border-black">
+                                        <img alt="Student studying with focus"
+                                            class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                                            data-alt="Intense student studying late night"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuByxan9lTvWEStWIRFOfnnm014NdnRFXmQMnXJKRirHQgBanH3Es_QoXISLQVWOJ9IT8m4LYtIUMGYJ0IJZOlJby6QynA8plRJir_teOCEM2uhY4RapVWoY25b-K6rMwZaYTeKST357XlkC8kUXwWgM1i_pMT2Gz7TkrcHwwknSqBLlgjAxASVed3o5NOtRbc0f_pE90TQ5tRRlwFZ60bbYhxTN9JSlVeQrvKo-uOTaDfJokR2rrRoqk3fllZ0IOn6wSOHQNSA2CMo" />
+                                        <div
+                                            class="absolute bottom-0 left-0 bg-accent px-4 py-2 border-t-4 border-r-4 border-black">
+                                            <span class="font-comic-title text-2xl text-black">ULBI UNIVERSITY</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 bg-white">
+                                        <h3 class="font-comic-title text-3xl mb-2 text-primary">ACADEMIC EXCELLENCE</h3>
+                                        <p class="font-bold text-lg leading-relaxed border-l-4 border-gray-300 pl-4">
+                                            Maintained a staggering <span class="bg-yellow-200 px-1">3.81 GPA</span>
+                                            while mastering the arcane arts of algorithms and logic structure.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Panel 2: Leadership -->
+                            <div
+                                class="group relative md:rotate-3 md:mt-24 hover:rotate-0 transition-transform duration-300">
+                                <div
+                                    class="absolute -top-16 right-10 w-64 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div
+                                        class="speech-bubble bg-white border-4 border-black p-4 rounded-xl shadow-comic text-center">
+                                        <p class="font-bold text-black uppercase text-sm">Lead the way!</p>
+                                    </div>
+                                </div>
+                                <div class="border-4 border-black bg-white p-2 shadow-panel">
+                                    <div
+                                        class="relative w-full aspect-[4/3] bg-black overflow-hidden border-2 border-black">
+                                        <img alt="Team collaboration meeting"
+                                            class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                                            data-alt="Group of people brainstorming ideas"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzy7mQpwuN1CinBRweQpOHbVmu3SJz9qrd-QRlUNpflccdXCGBzfQA1Q_Dc7kGDUGqgkZ0VwwLbvNQbhoywXOf26IwYg3JlOcEOyv8K70dHwUf6dFs8ZeWVG9vFCqZoh8OTpd016L3H1z5mnVdJzLQQDgLN2sou_ZCqC7ebT9aX1zTQfwupCvBJg2osjxv1ur7kB7KfHk_3-IX3t-LAK1U4ZBN1OCsyfQY5Sqc1PeMeEw4F-kkj_zpFc1ybECfPex8c9HdysTTyPc" />
+                                        <div
+                                            class="absolute top-0 right-0 bg-primary px-4 py-2 border-b-4 border-l-4 border-black">
+                                            <span class="font-comic-title text-2xl text-white">HIMATIF LEAGUE</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 bg-white">
+                                        <h3 class="font-comic-title text-3xl mb-2 text-secondary">LEADERSHIP COMMAND
+                                        </h3>
+                                        <p class="font-bold text-lg leading-relaxed border-l-4 border-gray-300 pl-4">
+                                            Guided the HIMATIF team through the treacherous valleys of project
+                                            management and innovation challenges.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Superpowers Section -->
+                    <section class="py-12">
+                        <div class="relative mb-16 text-center">
+                            <h2 class="font-comic-title text-6xl text-black drop-shadow-[3px_3px_0_rgba(255,255,255,1)]"
+                                style="-webkit-text-stroke: 2px black;">
+                                SUPERPOWERS
+                            </h2>
+                            <p
+                                class="font-bold text-lg mt-4 max-w-2xl mx-auto bg-white border-2 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                The arsenal of skills used to defeat bugs and deploy solutions!
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+                            <!-- Skill 1 -->
+                            <div class="flex flex-col items-center group cursor-pointer">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:-rotate-6">
+                                    <div
+                                        class="absolute inset-0 bg-primary burst-shape border-2 border-black shadow-comic z-0">
+                                    </div>
+                                    <div class="z-10 text-white flex flex-col items-center">
+                                        <span class="material-symbols-outlined !text-5xl drop-shadow-md">terminal</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-primary italic transform -skew-x-12">POW!
+                                    </h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">Python</p>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div class="flex flex-col items-center group cursor-pointer mt-8 md:mt-0">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6">
+                                    <div
+                                        class="absolute inset-0 bg-[#ff2d20] burst-shape border-2 border-black shadow-comic z-0 rotate-45">
+                                    </div>
+                                    <div class="z-10 text-white flex flex-col items-center">
+                                        <span class="material-symbols-outlined !text-5xl drop-shadow-md">layers</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-[#ff2d20] italic transform -skew-x-12">
+                                        BAM!</h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">Laravel</p>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div class="flex flex-col items-center group cursor-pointer">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:-rotate-3">
+                                    <div
+                                        class="absolute inset-0 bg-[#02569b] burst-shape border-2 border-black shadow-comic z-0 rotate-12">
+                                    </div>
+                                    <div class="z-10 text-white flex flex-col items-center">
+                                        <span
+                                            class="material-symbols-outlined !text-5xl drop-shadow-md">smartphone</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-[#02569b] italic transform -skew-x-12">
+                                        ZAP!</h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">Flutter</p>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div class="flex flex-col items-center group cursor-pointer mt-8 md:mt-0">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-12">
+                                    <div
+                                        class="absolute inset-0 bg-[#61dafb] burst-shape border-2 border-black shadow-comic z-0 -rotate-12">
+                                    </div>
+                                    <div class="z-10 text-black flex flex-col items-center">
+                                        <span class="material-symbols-outlined !text-5xl drop-shadow-md">code</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-[#61dafb] italic transform -skew-x-12">
+                                        WHAM!</h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">React</p>
+                                </div>
+                            </div>
+                            <!-- Skill 5 -->
+                            <div class="flex flex-col items-center group cursor-pointer">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:-rotate-12">
+                                    <div
+                                        class="absolute inset-0 bg-[#e34c26] burst-shape border-2 border-black shadow-comic z-0 rotate-[30deg]">
+                                    </div>
+                                    <div class="z-10 text-white flex flex-col items-center">
+                                        <span class="material-symbols-outlined !text-5xl drop-shadow-md">database</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-[#e34c26] italic transform -skew-x-12">
+                                        CRASH!</h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">SQL</p>
+                                </div>
+                            </div>
+                            <!-- Skill 6 -->
+                            <div class="flex flex-col items-center group cursor-pointer mt-8 md:mt-0">
+                                <div
+                                    class="relative size-32 md:size-40 flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-3">
+                                    <div
+                                        class="absolute inset-0 bg-[#ae29ff] burst-shape border-2 border-black shadow-comic z-0 rotate-90">
+                                    </div>
+                                    <div class="z-10 text-white flex flex-col items-center">
+                                        <span class="material-symbols-outlined !text-5xl drop-shadow-md">palette</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-comic-title text-3xl text-[#ae29ff] italic transform -skew-x-12">
+                                        BOOM!</h3>
+                                    <p class="font-bold text-xl border-b-4 border-black px-2">UI/UX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

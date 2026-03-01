@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f42525",
+                        "hero-blue": "#2563eb",
+                        "hero-yellow": "#fbbf24",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .halftone {
+            background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+
+        .comic-border {
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px 0px #000;
+        }
+
+        .comic-text-stroke {
+            -webkit-text-stroke: 1.5px black;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="layout-container flex h-full grow flex-col">
+        <!-- Top Navigation -->
+        <header
+            class="flex items-center justify-between border-b-4 border-black bg-hero-blue px-6 py-4 sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-2 comic-border rounded-none">
+                    <span class="material-symbols-outlined text-white text-3xl font-bold">bolt</span>
+                </div>
+                <h2 class="text-white text-2xl font-black italic tracking-tighter comic-text-stroke uppercase">DevHero
+                </h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-white text-sm font-black uppercase hover:text-hero-yellow transition-colors"
+                    href="#">Home</a>
+                <a class="text-hero-yellow text-sm font-black uppercase underline decoration-4 underline-offset-8"
+                    href="#">Super Powers</a>
+                <a class="text-white text-sm font-black uppercase hover:text-hero-yellow transition-colors"
+                    href="#">Missions</a>
+                <a class="text-white text-sm font-black uppercase hover:text-hero-yellow transition-colors"
+                    href="#">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-primary text-white font-black uppercase px-6 py-2 comic-border hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                    Hire Me!
+                </button>
+            </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full p-6 lg:p-12">
+            <!-- Hero Title Section -->
+            <div class="relative flex justify-center items-center mb-16 py-10">
+                <div class="absolute inset-0 flex justify-center items-center">
+                    <div class="w-80 h-40 bg-hero-yellow rotate-3 comic-border scale-150 halftone text-primary/10">
+                    </div>
+                </div>
+                <div class="relative z-10 text-center">
+                    <h1
+                        class="text-6xl md:text-8xl font-black italic text-primary comic-text-stroke tracking-tighter transform -rotate-2">
+                        POW!
+                    </h1>
+                    <h2 class="text-3xl md:text-5xl font-black text-white comic-text-stroke uppercase tracking-tight">
+                        My Super Powers
+                    </h2>
+                </div>
+            </div>
+            <!-- Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="bg-primary text-white px-6 py-2 comic-border font-bold uppercase hover:bg-red-600">All
+                    Powers</button>
+                <button
+                    class="bg-white text-black px-6 py-2 comic-border font-bold uppercase hover:bg-slate-100">Frontend</button>
+                <button
+                    class="bg-white text-black px-6 py-2 comic-border font-bold uppercase hover:bg-slate-100">Backend</button>
+                <button
+                    class="bg-white text-black px-6 py-2 comic-border font-bold uppercase hover:bg-slate-100">DevOps</button>
+            </div>
+            <!-- Trading Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Card 1: JavaScript -->
+                <div
+                    class="bg-hero-yellow p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-primary h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">bolt</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 95
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">JavaScript</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"Lightning
+                            Bolt Speed Engines"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>95/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-primary" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #001</div>
+                </div>
+                <!-- Card 2: React -->
+                <div
+                    class="bg-hero-blue p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-sky-400 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">blur_on</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 90
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">React JS</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"Atomic
+                            Component Manipulation"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>90/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-hero-blue" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #002</div>
+                </div>
+                <!-- Card 3: Security -->
+                <div class="bg-primary p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-slate-800 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/10">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">shield</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 85
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">Security</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"The
+                            Unbreakable Firewall Shield"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>85/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-slate-800" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #003</div>
+                </div>
+                <!-- Card 4: Cloud -->
+                <div
+                    class="bg-slate-400 p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-hero-blue h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">cloud</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 80
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">AWS Cloud</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"Infinite
+                            Scalable Atmosphere"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>80/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-hero-blue" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #004</div>
+                </div>
+                <!-- Card 5: Node.js -->
+                <div
+                    class="bg-green-500 p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-green-700 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">terminal</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 88
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">Node.js</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"The
+                            Asynchronous Super Strength"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>88/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-green-700" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #005</div>
+                </div>
+                <!-- Card 6: UI Design -->
+                <div
+                    class="bg-purple-500 p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-purple-700 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">visibility</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 92
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">UI Design</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"Pixel
+                            Perfect Visual Telepathy"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>92/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-purple-700" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #006</div>
+                </div>
+                <!-- Card 7: Git -->
+                <div
+                    class="bg-orange-500 p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-orange-700 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">history</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 94
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">Git Mastery</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">
+                            "Multi-Timeline Manipulation"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>94/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-orange-700" style="width: 94%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #007</div>
+                </div>
+                <!-- Card 8: Database -->
+                <div class="bg-red-400 p-3 comic-border flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="bg-white border-4 border-black p-2 flex-1 flex flex-col">
+                        <div
+                            class="bg-red-900 h-48 mb-3 flex items-center justify-center relative overflow-hidden halftone text-white/20">
+                            <span
+                                class="material-symbols-outlined text-white text-8xl z-10 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">database</span>
+                            <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 font-bold">LVL. 82
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase text-black mb-1">SQL DB</h3>
+                        <p class="text-xs font-bold text-slate-600 uppercase mb-4 tracking-tighter italic">"The Vault of
+                            Eternal Knowledge"</p>
+                        <div class="mt-auto">
+                            <div class="flex justify-between text-xs font-black uppercase mb-1">
+                                <span>Power Level</span>
+                                <span>82/100</span>
+                            </div>
+                            <div class="h-6 w-full bg-slate-200 border-2 border-black p-0.5">
+                                <div class="h-full bg-red-900" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center text-black font-black text-[10px] uppercase tracking-widest">
+                        Collector's Edition #008</div>
+                </div>
+            </div>
+            <!-- Bottom CTA Section -->
+            <div class="mt-20 p-8 border-4 border-black bg-hero-yellow comic-border relative overflow-hidden">
+                <div class="absolute inset-0 halftone opacity-20"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h3 class="text-4xl font-black uppercase text-black comic-text-stroke">Need a hero?</h3>
+                        <p class="text-xl font-bold text-black uppercase">Enlist my super powers for your next project!
+                        </p>
+                    </div>
+                    <button
+                        class="bg-primary text-white text-2xl font-black uppercase px-12 py-4 comic-border hover:scale-105 transition-transform">
+                        Signal Me!
+                    </button>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-black text-white p-8 mt-12">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-hero-yellow">bolt</span>
+                    <span class="font-black uppercase tracking-tighter italic">DevHero 2024</span>
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-xs font-bold uppercase hover:text-hero-yellow transition-colors" href="#">GitHub</a>
+                    <a class="text-xs font-bold uppercase hover:text-hero-yellow transition-colors"
+                        href="#">LinkedIn</a>
+                    <a class="text-xs font-bold uppercase hover:text-hero-yellow transition-colors" href="#">Twitter</a>
+                </div>
+                <p class="text-[10px] uppercase font-bold text-slate-500">All characters and code strictly property of
+                    DevHero Inc.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
